@@ -528,5 +528,6 @@ rules:
   - "RULE-SET,ProxyGFWlist,🚀 主节点选择"
   - "RULE-SET,ChinaDomain,🎯 全球直连"
   - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
+  - "DOMAIN-SUFFIX,steamserver.net,🎯 全球直连"
   - "GEOIP,CN,🎯 全球直连"
   - "MATCH,🐟 漏网之鱼"
