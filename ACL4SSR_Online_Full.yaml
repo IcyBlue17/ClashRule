@@ -575,7 +575,7 @@ rules:
   - "RULE-SET,OpenAi,💬 OpenAi"
   - "RULE-SET,DC1,DC1"
   - "RULE-SET,DC24,DC24"
-  - "RULE-SET,DC5,D5"
+  - "RULE-SET,DC5,DC5"
   - "RULE-SET,NetEaseMusic,🎶 网易音乐"
   - "RULE-SET,Epic,🎮 游戏平台"
   - "RULE-SET,Origin,🎮 游戏平台"
