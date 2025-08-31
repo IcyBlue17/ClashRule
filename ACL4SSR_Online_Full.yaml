@@ -27,7 +27,35 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-  - name: 📲 电报消息
+  - name: DC1
+    type: select
+    proxies:
+      - 🚀 主节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇩🇪 德国节点
+      - 🚀 手动切换
+      - 备选节点
+      - DIRECT
+  - name: DC24
+    type: select
+    proxies:
+      - 🚀 主节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇩🇪 德国节点
+      - 🚀 手动切换
+      - 备选节点
+      - DIRECT
+  - name: DC5
     type: select
     proxies:
       - 🚀 主节点选择
@@ -113,6 +141,10 @@ proxy-groups:
       - 🇩🇪 德国节点
       - 🚀 手动切换
       - DIRECT
+  - name: 🎯 Emby
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -419,6 +451,34 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Emby:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/emby.list
+    path: ./ruleset/Emby.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  DC1:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/Telegram/dc1.list
+    path: ./ruleset/DC1.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  DC24:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/Telegram/dc24.list
+    path: ./ruleset/DC24.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  DC5:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/Telegram/dc5.list
+    path: ./ruleset/DC5.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   Netflix:
     url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
     path: ./ruleset/Netflix.list
@@ -499,6 +559,8 @@ rule-providers:
 
 rules:
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
+  - "RULE-SET,Emby,🎯 Emby"
+  
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
@@ -510,8 +572,10 @@ rules:
   - "RULE-SET,OneDrive,Ⓜ️ 微软云盘"
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,Apple,🍎 苹果服务"
-  - "RULE-SET,Telegram,📲 电报消息"
   - "RULE-SET,OpenAi,💬 OpenAi"
+  - "RULE-SET,DC1,DC1"
+  - "RULE-SET,DC24,DC24"
+  - "RULE-SET,DC5,D5"
   - "RULE-SET,NetEaseMusic,🎶 网易音乐"
   - "RULE-SET,Epic,🎮 游戏平台"
   - "RULE-SET,Origin,🎮 游戏平台"
