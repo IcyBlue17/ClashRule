@@ -144,7 +144,6 @@ proxy-groups:
   - name: 🎯 Emby
     type: select
     proxies:
-      - 🇭🇰 香港节点
       - 🇯🇵 日本节点
   - name: 🌏 国内媒体
     type: select
