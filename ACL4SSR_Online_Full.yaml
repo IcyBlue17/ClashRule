@@ -558,7 +558,8 @@ rule-providers:
     type: http
 
 rules:
-  - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
+  - "RULE-SET,LocalAreaNetwork,DIRECT"
+  - "PROCESS-NAME",python3,DIRECT"
   - "RULE-SET,Emby,🎯 Emby"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
@@ -592,5 +593,6 @@ rules:
   - "RULE-SET,ChinaDomain,🎯 全球直连"
   - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
   - "DOMAIN-SUFFIX,steamserver.net,🎯 全球直连"
+
   - "GEOIP,CN,🎯 全球直连"
   - "MATCH,🐟 漏网之鱼"
