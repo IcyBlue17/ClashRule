@@ -560,7 +560,7 @@ rule-providers:
 
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
-  - "PROCESS-NAME",python3,DIRECT"
+  - "PROCESS-NAME,python3,DIRECT"
   - "RULE-SET,Emby,🎯 Emby"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
