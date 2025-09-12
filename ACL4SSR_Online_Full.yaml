@@ -551,8 +551,15 @@ rule-providers:
     format: text
     type: http
   Google:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list
     path: ./ruleset/Google.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  PCDN:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/pcdn.list
+    path: ./ruleset/PCDN.list
     behavior: classical
     interval: 86400
     format: text
@@ -561,7 +568,9 @@ rule-providers:
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "PROCESS-NAME,python3,DIRECT"
-  - "DOMAIN-SUFFIX,steamserver.net,🎯 全球直连"
+  - "PROCESS-NAME,AdGuardHome,DIRECT"
+  - "RULE-SET,PCDN,🛑 广告拦截"
+  - "DOMAIN-SUFFIX,steamserver.net,DIRECT"
   - "RULE-SET,Emby,🎯 Emby"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
