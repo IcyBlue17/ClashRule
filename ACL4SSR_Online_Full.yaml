@@ -574,6 +574,7 @@ rules:
   - "RULE-SET,DC24,DC24"
   - "RULE-SET,PCDN,🛑 广告拦截"
   - "DOMAIN-SUFFIX,steamserver.net,DIRECT"
+  - "GEOSITE,projectsekai,备选节点"
   - "RULE-SET,Emby,🎯 Emby"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
