@@ -568,7 +568,6 @@ rule-providers:
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "PROCESS-NAME,python3,DIRECT"
-  - "PROCESS-NAME,AdGuardHome,DIRECT"
   - "RULE-SET,DC5,DC5"
   - "RULE-SET,DC1,DC1"
   - "RULE-SET,DC24,DC24"
