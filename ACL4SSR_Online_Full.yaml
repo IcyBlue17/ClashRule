@@ -15,6 +15,9 @@ proxy-groups:
   - name: 🚀 手动切换
     include-all: true
     type: select
+  - name: 推特节点
+    include-all: true
+    type: select
   - name: 谷歌节点
     include-all: true
     type: select
@@ -306,7 +309,7 @@ proxy-groups:
     tolerance: 50
   - name: 🇩🇪 德国节点
     include-all: true
-    filter: (?i)KR|Korea|DE|首尔|韩|韓
+    filter: (?i)|DE|首尔|韩|韓
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -564,6 +567,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Twitter:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.list
+    path: ./ruleset/Twitter.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
@@ -583,6 +593,7 @@ rules:
   - "RULE-SET,Google,谷歌节点"
   - "RULE-SET,SteamCN,🎯 全球直连"
   - "RULE-SET,Bing,Ⓜ️ 微软Bing"
+  - "RULE-SET,Twitter,推特节点"
   - "RULE-SET,OneDrive,Ⓜ️ 微软云盘"
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,Apple,🍎 苹果服务"
