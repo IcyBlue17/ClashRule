@@ -115,12 +115,19 @@ proxy-groups:
       - 🇩🇪 德国节点
       - 🚀 手动切换
       - DIRECT
-  - name: 📺 巴哈姆特
+
+  - name: 🌍 国外媒体
     type: select
     proxies:
-      - 🇨🇳 台湾节点
-      - 备选节点
       - 🚀 主节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 备选节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇩🇪 德国节点
       - 🚀 手动切换
       - DIRECT
   - name: 📺 哔哩哔哩
@@ -146,9 +153,7 @@ proxy-groups:
       - DIRECT
   - name: 🎯 Emby
     type: select
-    proxies:
-      - 🇯🇵 日本节点
-      - 🇭🇰 香港节点
+    include-all: true
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -233,15 +238,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🚀 手动切换
-  - name: 🎶 网易音乐
-    type: select
-    include-all: true
-    filter: (?i)网易|音乐|NetEase|Music
-    proxies:
-      - DIRECT
-      - 🚀 主节点选择
-      - 备选节点
-      - ♻️ 自动选择
+
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -307,13 +304,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-  - name: 🇩🇪 德国节点
-    include-all: true
-    filter: (?i)|DE|首尔|韩|韓
-    type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+
 rule-providers:
   LocalAreaNetwork:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
@@ -599,7 +590,6 @@ rules:
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,Apple,🍎 苹果服务"
   - "RULE-SET,OpenAi,💬 OpenAi"
-  - "RULE-SET,NetEaseMusic,🎶 网易音乐"
   - "RULE-SET,Epic,🎮 游戏平台"
   - "RULE-SET,Origin,🎮 游戏平台"
   - "RULE-SET,Sony,🎮 游戏平台"
@@ -607,7 +597,6 @@ rules:
   - "RULE-SET,Nintendo,🎮 游戏平台"
   - "RULE-SET,YouTube,📹 油管视频"
   - "RULE-SET,Netflix,🎥 奈飞视频"
-  - "RULE-SET,Bahamut,📺 巴哈姆特"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩"
   - "RULE-SET,Bilibili,📺 哔哩哔哩"
   - "RULE-SET,ChinaMedia,🌏 国内媒体"
