@@ -115,21 +115,6 @@ proxy-groups:
       - 🇩🇪 德国节点
       - 🚀 手动切换
       - DIRECT
-
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🚀 主节点选择
-      - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 备选节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🇩🇪 德国节点
-      - 🚀 手动切换
-      - DIRECT
   - name: 📺 哔哩哔哩
     type: select
     proxies:
