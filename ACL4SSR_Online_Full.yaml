@@ -585,6 +585,7 @@ rules:
   - "DOMAIN-SUFFIX,steamserver.net,DIRECT"
   - "GEOSITE,projectsekai,备选节点"
   - "RULE-SET,Emby,🎯 Emby"
+  - "DOMAIN-SUFFIX,acgs.one,备选节点"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
