@@ -14,6 +14,9 @@ proxy-groups:
   - name: 🚀 手动切换
     include-all: true
     type: select
+  - name: DNS组
+    include-all: true
+    type: select
   - name: 推特节点
     include-all: true
     type: select
@@ -547,6 +550,7 @@ rules:
   - "PROCESS-NAME,python3,DIRECT"
   - "RULE-SET,DC5,DC5"
   - "RULE-SET,DC1,DC1"
+  - "DOMAIN-SUFFIX,cloudflare-gateway.com,DNS组"
   - "RULE-SET,DC24,DC24"
   - "RULE-SET,PCDN,🛑 广告拦截"
   - "DOMAIN-SUFFIX,steamserver.net,DIRECT"
