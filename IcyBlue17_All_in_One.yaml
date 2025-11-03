@@ -1,0 +1,364 @@
+proxy-groups:
+  LocalAreaNetwork:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./ruleset/LocalAreaNetwork.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  - name: Main
+    include-all: true
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: DNS
+    type: select
+    include-all: true
+    filter: (?i)香港|香港|HK|Hong Kong|hongkong
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: Twitter
+    proxies:
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - 🇺🇲 USA
+      - 🇸🇬 SGP
+    type: select
+  - name: Google
+    include-all: true
+    type: select
+  - name: SP
+    include-all: true
+    type: select
+  - name: DC1
+    type: select
+    proxies:
+      - 🇸🇬 SGP
+      - 🇭🇰 HKG
+  - name: DC24
+    type: select
+    proxies:
+      - 🇭🇰 HKG
+      - 🇪🇺 EUR
+  - name: DC5
+    type: select
+    proxies:
+      - 🇸🇬 SGP
+      - 🇭🇰 HKG
+  - name: BaseAI
+    type: select
+    proxies:
+      - 🇺🇲 USA
+      - 🇯🇵 JPN
+      - 🇸🇬 SGP
+      - 🇨🇳 TWN
+  - name: YouTube
+    type: select
+    proxies:
+      - SP
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+  - name: BaseStream
+    type: select
+    proxies:
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - 🇸🇬 SGP
+      - 🇨🇳 TWN
+  - name: Emby
+    type: select
+    include-all: true
+    filter: (?i)大流量|Jinx|陈伟|直连|Emby
+  - name: Microsoft Bing
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - 🇨🇳 TWN
+  - name: Microsoft OneDrive
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 HKG
+  - name: Microsoft Services
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - 🇨🇳 TWN
+  - name: Gaming
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - SP
+  - name: Final
+    type: select
+    proxies:
+      - 主节点
+      - SP
+      - DIRECT
+  - name: SP
+    include-all: true
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: 🇭🇰 HKG
+    include-all: true
+    filter: (?i)港|HK|Hong Kong|HongKong|hongkong
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: 🇯🇵 JPN
+    include-all: true
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: 🇺🇲 USA
+    include-all: true
+    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|Kirino|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: 🇨🇳 TWN
+    include-all: true
+    filter: (?i)台|新北|彰化|TW|Taiwan
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: 🇸🇬 SGP
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+  - name: 🇪🇺 EUR
+    include-all: true
+    filter: (?i)欧|Europe|DE|Germany|FR|France|NL|Netherlands|UK|United Kingdom
+    type: select
+    url: https://ping.21119855.xyz
+    interval: 300
+    tolerance: 50
+
+
+
+rule-providers:
+  LAN:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan.list
+    path: ./ruleset/LAN.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Apple:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
+    path: ./ruleset/Apple.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Microsoft:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  OneDrive:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list
+    path: ./ruleset/OneDrive.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  
+  GlobalMedia:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GlobalMedia/GlobalMedia.list
+    path: ./ruleset/GlobalMedia.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  OpenAI:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.list
+    path: ./ruleset/OpenAI.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Gemini:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.list
+    path: ./ruleset/Gemini.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  TGDC1:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TelegramUS/TelegramUS.list
+    path: ./ruleset/TGDC1.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  TGDC24:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TelegramNL/TelegramNL.list
+    path: ./ruleset/TGDC24.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  TGDC5:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TelegramSG/TelegramSG.list
+    path: ./ruleset/TGDC5.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http  
+  HTTPDNS:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
+    path: ./ruleset/HTTPDNS.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  ZhihuADs:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhihuAds/ZhihuAds.list
+    path: ./ruleset/ZhihuADs.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  DNS:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DNS/DNS.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  STUN:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/STUN/STUN.list
+    path: ./ruleset/STUN.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http  
+  Games:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/Game.list
+    path: ./ruleset/Games.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http  
+  YouTube:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list
+    path: ./ruleset/Youtube.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  SteamCN:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.list
+    path: ./ruleset/SteamCN.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http  
+  Emby:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/emby.list
+    path: ./ruleset/Emby.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  PCDN:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/pcdn.list
+    path: ./ruleset/PCDN.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  China:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
+    path: ./ruleset/China.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Origin:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Origin/Origin.list
+    path: ./ruleset/Origin.yaml
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Epic:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list
+    path: ./ruleset/Epic.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Bing:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.list
+    path: ./ruleset/Bing.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+ GoogleVoice:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleVoice/GoogleVoice.list
+    path: ./ruleset/GoogleVoice.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  
+
+rules:
+  - "RULE-SET,LAN,DIRECT"
+  - "RULE-SET,PCDN,REJECT"
+  - "RULE-SET,ZhihuADs,REJECT"
+  - "RULE-SET,HTTPDNS,REJECT"
+  - "RULE-SET,SteamCN,DIRECT"
+  - "RULE-SET,China,DIRECT"
+  - "GEOIP,CN,DIRECT"
+  - "GEOSITE,CN,DIRECT"
+  - "GEOSITE,projectsekai,SP"
+  - "RULE-SET,Twitter,Twitter"
+  - "RULE-SET,Bing,Microsoft Bing"
+  - "RULE-SET,OneDrive,Microsoft OneDrive"
+  - "RULE-SET,Microsoft,Microsoft Services"
+  - "RULE-SET,Apple,Apple"
+  - "RULE-SET,YouTube,YouTube"
+  - "RULE-SET,GoogleVoice,🇺🇸 USA"
+  - "RULE-SET,Gemini,BaseAI"
+  - "RULE-SET,Google,Google"
+  - "RULE-SET,OpenAI,BaseAI"
+  - "RULE-SET,GlobalMedia,BaseStream"
+  - "RULE-SET,TGDC1,DC1"
+  - "RULE-SET,TGDC24,DC24"
+  - "RULE-SET,TGDC5,DC5"
+  - "RULE-SET,Origin,Gaming"
+  - "RULE-SET,Epic,Gaming"
+  - "RULE-SET,Games,Gaming"
+  - "RULE-SET,Emby,Emby"
+  - "PROCESS-NAME,mosdns,DNS"
+  - "RULE-SET,STUN,Main"
+  - "MATCH,Main"
