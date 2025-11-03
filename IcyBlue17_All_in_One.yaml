@@ -15,6 +15,7 @@ proxy-groups:
       - 🇯🇵 JPN
       - 🇺🇲 USA
       - 🇸🇬 SGP
+      - Main
     type: select
   - name: Google
     include-all: true
@@ -29,18 +30,22 @@ proxy-groups:
   - name: DC1
     type: select
     proxies:
-      - 🇸🇬 SGP
+      - 🇯🇵 JPN
+      - 🇺🇲 USA
       - 🇭🇰 HKG
+      - Main
   - name: DC24
     type: select
     proxies:
       - 🇭🇰 HKG
       - 🇪🇺 EUR
+      - Main
   - name: DC5
     type: select
     proxies:
       - 🇸🇬 SGP
       - 🇭🇰 HKG
+      - Main
   - name: BaseAI
     type: select
     proxies:
@@ -48,12 +53,14 @@ proxy-groups:
       - 🇯🇵 JPN
       - 🇸🇬 SGP
       - 🇨🇳 TWN
+      - Main
   - name: YouTube
     type: select
     proxies:
       - SP
       - 🇭🇰 HKG
       - 🇯🇵 JPN
+      - Main
   - name: BaseStream
     type: select
     proxies:
@@ -61,6 +68,7 @@ proxy-groups:
       - 🇯🇵 JPN
       - 🇸🇬 SGP
       - 🇨🇳 TWN
+      - Main
   - name: Emby
     type: select
     include-all: true
@@ -75,17 +83,21 @@ proxy-groups:
       - 🇭🇰 HKG
       - 🇯🇵 JPN
       - 🇨🇳 TWN
+      - Main
   - name: Microsoft OneDrive
     type: select
     proxies:
       - DIRECT
       - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - Main
   - name: Microsoft Services
     type: select
     proxies:
       - DIRECT
       - 🇭🇰 HKG
       - 🇯🇵 JPN
+      - Main
   - name: Apple
     type: select
     proxies:
@@ -93,6 +105,7 @@ proxy-groups:
       - 🇭🇰 HKG
       - 🇯🇵 JPN
       - 🇨🇳 TWN
+      - Main
   - name: Gaming
     type: select
     proxies:
@@ -100,6 +113,7 @@ proxy-groups:
       - 🇭🇰 HKG
       - 🇯🇵 JPN
       - SP
+      - Main
   - name: Final
     type: select
     proxies:
