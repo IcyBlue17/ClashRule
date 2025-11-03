@@ -24,6 +24,16 @@ proxy-groups:
     include-all: true
     type: select
     filter: (?i)美国|USA|US
+  - name: IP ATTR
+    proxies:
+      - 🇺🇲 USA
+      - 🇯🇵 JPN
+      - 🇸🇬 SGP
+      - 🇨🇳 TWN
+      - 🇭🇰 HKG
+      - Main
+      - DIRECT
+    type: select
   - name: SP
     include-all: true
     type: select
@@ -360,6 +370,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   Google:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
     path: ./ruleset/Google.list
@@ -368,13 +379,39 @@ rule-providers:
     format: text
     type: http
 
+  IPATTR-PROXY:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-proxy.list
+    path: ./ruleset/IPATTR-P.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+    IPATTR-DIRECT:
+      url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-direct.list
+      path: ./ruleset/IPATTR-D.list
+      behavior: classical
+      interval: 86400
+      format: text
+      type: http
+
+    IPATTR-REJECT:
+      url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-reject.list
+      path: ./ruleset/IPATTR-R.list
+      behavior: classical
+      interval: 86400
+      format: text
+      type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
+  - "RULE-SET,IPATTR-REJECT,REJECT"
   - "RULE-SET,PCDN,REJECT"
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
+  - "RULE-SET,IPATTR-DIRECT,DIRECT"
+  - "RULE-SET,IPATTR-PROXY,IP ATTR"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "GEOSITE,projectsekai,SP"
