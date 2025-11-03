@@ -2,16 +2,10 @@ proxy-groups:
   - name: Main
     include-all: true
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: DNS
     type: select
     include-all: true
     filter: (?i)香港|香港|HK|Hong Kong|hongkong
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: Twitter
     proxies:
       - 🇭🇰 HKG
@@ -99,58 +93,36 @@ proxy-groups:
   - name: Final
     type: select
     proxies:
-      - 主节点
+      - Main
       - SP
       - DIRECT
   - name: SP
     include-all: true
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: 🇭🇰 HKG
     include-all: true
     filter: (?i)港|HK|Hong Kong|HongKong|hongkong
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: 🇯🇵 JPN
     include-all: true
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: 🇺🇲 USA
     include-all: true
     filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|Kirino|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: 🇨🇳 TWN
     include-all: true
     filter: (?i)台|新北|彰化|TW|Taiwan
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: 🇸🇬 SGP
     include-all: true
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
   - name: 🇪🇺 EUR
     include-all: true
     filter: (?i)欧|Europe|DE|Germany|FR|France|NL|Netherlands|UK|United Kingdom
     type: select
-    url: https://ping.21119855.xyz
-    interval: 300
-    tolerance: 50
-
 
 
 rule-providers:
