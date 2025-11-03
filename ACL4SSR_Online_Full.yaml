@@ -496,14 +496,14 @@ rule-providers:
     format: text
     type: http
   ProxyGFWlist:
-    url: https://gh.11451919.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaMax/ChinaMax.list
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
     path: ./ruleset/ProxyGFWlist.list
     behavior: classical
     interval: 86400
     format: text
     type: http
   ChinaDomain:
-    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    url: https://gh.11451919.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaMax/ChinaMax.list
     path: ./ruleset/ChinaDomain.list
     behavior: domain
     interval: 86400
