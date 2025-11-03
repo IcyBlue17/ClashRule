@@ -124,6 +124,12 @@ proxy-groups:
       - 🇯🇵 JPN
       - SP
       - Main
+  - name: Strict Anti-AD
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - Main
   - name: Final
     type: select
     proxies:
@@ -379,7 +385,7 @@ rule-providers:
     format: text
     type: http
 
-  IPATTR-PROXY:
+  ip-p:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-proxy.list
     path: ./ruleset/IPATTR-P.list
     behavior: classical
@@ -387,31 +393,48 @@ rule-providers:
     format: text
     type: http
 
-    IPATTR-DIRECT:
-      url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-direct.list
-      path: ./ruleset/IPATTR-D.list
-      behavior: classical
-      interval: 86400
-      format: text
-      type: http
+  ip-d:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-direct.list
+    path: ./ruleset/IPATTR-D.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
-    IPATTR-REJECT:
-      url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-reject.list
-      path: ./ruleset/IPATTR-R.list
-      behavior: classical
-      interval: 86400
-      format: text
-      type: http
+  ip-r:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/rule-set-reject.list
+    path: ./ruleset/IPATTR-R.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  strict-antiad:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/reject.list
+    path: ./ruleset/s-antiad.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  shabi-meituan:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/MeiTuan/MeiTuan.list
+    path: ./ruleset/meituan.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
-  - "RULE-SET,IPATTR-REJECT,REJECT"
+  - "RULE-SET,ip-r,REJECT"
   - "RULE-SET,PCDN,REJECT"
+  - "RULE-SET,strict-antiad,Strict Anti-AD"
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
-  - "RULE-SET,IPATTR-DIRECT,DIRECT"
-  - "RULE-SET,IPATTR-PROXY,IP ATTR"
+  - "RULE-SET,ip-d,DIRECT"
+  - "RULE-SET,ip-p,IP ATTR"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "GEOSITE,projectsekai,SP"
@@ -435,4 +458,5 @@ rules:
   - "RULE-SET,Emby,Emby"
   - "PROCESS-NAME,mosdns,DNS"
   - "RULE-SET,STUN,Main"
+  - "RULE-SET,shabi-meituan,DIRECT"
   - "MATCH,Main"
