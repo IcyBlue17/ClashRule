@@ -335,7 +335,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-
+  Twitter:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.list
+    path: ./ruleset/Twitter.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
