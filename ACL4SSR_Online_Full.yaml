@@ -522,6 +522,7 @@ rule-providers:
     behavior: ipcidr
     interval: 86400
     format: yaml
+    type: http
   Google:
     url: https://gh.21119855.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list
     path: ./ruleset/Google.list
