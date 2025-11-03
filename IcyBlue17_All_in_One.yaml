@@ -19,6 +19,10 @@ proxy-groups:
   - name: Google
     include-all: true
     type: select
+  - name: GoogleVoice
+    include-all: true
+    type: select
+    filter: (?i)美国|USA|US
   - name: SP
     include-all: true
     type: select
@@ -359,7 +363,7 @@ rules:
   - "RULE-SET,Microsoft,Microsoft Services"
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,YouTube,YouTube"
-  - "RULE-SET,GoogleVoice,🇺🇸 USA"
+  - "RULE-SET,GoogleVoice,GoogleVoice"
   - "RULE-SET,Gemini,BaseAI"
   - "RULE-SET,Google,Google"
   - "RULE-SET,OpenAI,BaseAI"
