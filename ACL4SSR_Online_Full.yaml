@@ -496,7 +496,7 @@ rule-providers:
     format: text
     type: http
   ProxyGFWlist:
-    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+    url: https://gh.11451919.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaMax/ChinaMax.list
     path: ./ruleset/ProxyGFWlist.list
     behavior: classical
     interval: 86400
@@ -509,13 +509,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  ChinaCompanyIp:
-    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./ruleset/ChinaCompanyIp.list
-    behavior: ipcidr
-    interval: 86400
-    format: text
-    type: http
   Download:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
     path: ./ruleset/Download.list
@@ -523,6 +516,12 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  ChinaIPs:
+    url: https://gh.11451919.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaMax/ChinaMax_IP.yaml
+    path: ./ruleset/ChinaIPs.list
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
   Google:
     url: https://gh.21119855.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list
     path: ./ruleset/Google.list
@@ -582,7 +581,7 @@ rules:
   - "RULE-SET,ProxyMedia,🌍 国外媒体"
   - "RULE-SET,ProxyGFWlist,🚀 主节点选择"
   - "RULE-SET,ChinaDomain,🎯 全球直连"
-  - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
+  - "RULE-SET,ChinaIPs,🎯 全球直连"
   - "GEOIP,CN,🎯 全球直连"
   - "PROCESS-NAME,mosdns,DNS组"
   - "MATCH,🐟 漏网之鱼"
