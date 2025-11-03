@@ -505,7 +505,7 @@ rule-providers:
   ChinaDomain:
     url: https://gh.11451919.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaMax/ChinaMax.list
     path: ./ruleset/ChinaDomain.list
-    behavior: domain
+    behavior: classical
     interval: 86400
     format: text
     type: http
@@ -581,7 +581,7 @@ rules:
   - "RULE-SET,ChinaMedia,🌏 国内媒体"
   - "RULE-SET,ProxyMedia,🌍 国外媒体"
   - "RULE-SET,ProxyGFWlist,🚀 主节点选择"
-  - "RULE-SET,ChinaDomain,🎯 全球直连"
+  - "RULE-SET,ChinaDomain,🎯 全球直连"z
   - "RULE-SET,ChinaIPs,🎯 全球直连"
   - "GEOIP,CN,🎯 全球直连"
   - "PROCESS-NAME,mosdns,DNS组"
