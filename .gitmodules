@@ -1,0 +1,3 @@
+[submodule "singbox_proxy_config"]
+	path = singbox_proxy_config
+	url = https://github.com/kj163kj/singbox_proxy_config.git
