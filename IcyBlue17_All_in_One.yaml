@@ -1,11 +1,4 @@
 proxy-groups:
-  LocalAreaNetwork:
-    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./ruleset/LocalAreaNetwork.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   - name: Main
     include-all: true
     type: select
