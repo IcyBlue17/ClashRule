@@ -96,9 +96,6 @@ proxy-groups:
       - Main
       - SP
       - DIRECT
-  - name: SP
-    include-all: true
-    type: select
   - name: 🇭🇰 HKG
     include-all: true
     filter: (?i)港|HK|Hong Kong|HongKong|hongkong
@@ -133,6 +130,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   Apple:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
     path: ./ruleset/Apple.list
@@ -140,6 +138,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   Microsoft:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
     path: ./ruleset/Microsoft.list
@@ -147,6 +146,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   OneDrive:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list
     path: ./ruleset/OneDrive.list
@@ -154,7 +154,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  
+
   GlobalMedia:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GlobalMedia/GlobalMedia.list
     path: ./ruleset/GlobalMedia.list
@@ -162,6 +162,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   OpenAI:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.list
     path: ./ruleset/OpenAI.list
@@ -169,6 +170,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   Gemini:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.list
     path: ./ruleset/Gemini.list
@@ -176,6 +178,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   TGDC1:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TelegramUS/TelegramUS.list
     path: ./ruleset/TGDC1.list
@@ -183,6 +186,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   TGDC24:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TelegramNL/TelegramNL.list
     path: ./ruleset/TGDC24.list
@@ -190,13 +194,15 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   TGDC5:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TelegramSG/TelegramSG.list
     path: ./ruleset/TGDC5.list
     behavior: classical
     interval: 86400
     format: text
-    type: http  
+    type: http
+
   HTTPDNS:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
     path: ./ruleset/HTTPDNS.list
@@ -204,6 +210,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   ZhihuADs:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhihuAds/ZhihuAds.list
     path: ./ruleset/ZhihuADs.list
@@ -211,26 +218,31 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   DNS:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DNS/DNS.list
+    path: ./ruleset/DNS.list
     behavior: classical
     interval: 86400
     format: text
     type: http
+
   STUN:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/STUN/STUN.list
     path: ./ruleset/STUN.list
     behavior: classical
     interval: 86400
     format: text
-    type: http  
+    type: http
+
   Games:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/Game.list
     path: ./ruleset/Games.list
     behavior: classical
     interval: 86400
     format: text
-    type: http  
+    type: http
+
   YouTube:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list
     path: ./ruleset/Youtube.list
@@ -238,13 +250,15 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   SteamCN:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.list
     path: ./ruleset/SteamCN.list
     behavior: classical
     interval: 86400
     format: text
-    type: http  
+    type: http
+
   Emby:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/emby.list
     path: ./ruleset/Emby.list
@@ -252,6 +266,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   PCDN:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/pcdn.list
     path: ./ruleset/PCDN.list
@@ -259,6 +274,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   China:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
     path: ./ruleset/China.list
@@ -266,6 +282,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   Origin:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Origin/Origin.list
     path: ./ruleset/Origin.yaml
@@ -273,6 +290,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   Epic:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list
     path: ./ruleset/Epic.list
@@ -280,6 +298,7 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+
   Bing:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.list
     path: ./ruleset/Bing.list
@@ -287,14 +306,15 @@ rule-providers:
     interval: 86400
     format: text
     type: http
- GoogleVoice:
+
+  GoogleVoice:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleVoice/GoogleVoice.list
     path: ./ruleset/GoogleVoice.list
     behavior: classical
     interval: 86400
     format: text
     type: http
-  
+
 
 rules:
   - "RULE-SET,LAN,DIRECT"
