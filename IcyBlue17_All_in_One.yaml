@@ -460,6 +460,13 @@ rule-providers:
     format: text
     type: http
 
+  Meituan-Overseas:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/fuck-meituan.list
+    path: ./ruleset/fkmt.list
+    behavior: classical
+    format: text
+    type: http
+
 
 
 rules:
@@ -467,6 +474,7 @@ rules:
   - "RULE-SET,ip-r,REJECT"
   - "RULE-SET,PCDN,REJECT"
   - "RULE-SET,strict-antiad,Strict Anti-AD"
+  - "RULE-SET,Meituan-Overseas,REJECT"
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
@@ -498,5 +506,6 @@ rules:
   - "RULE-SET,Emby,Emby"
   - "PROCESS-NAME,mosdns,DNS"
   - "RULE-SET,STUN,Main"
+  - "DST-PORT,3478,Main"
   - "RULE-SET,shabi-meituan,DIRECT"
   - "MATCH,Main"

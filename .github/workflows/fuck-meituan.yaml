@@ -1,0 +1,49 @@
+name: meituan blocklist updating
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'
+permissions:
+  contents: write
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: dig install
+        run: |
+          sudo apt-get update
+          sudo apt-get install dnsutils
+      - name: gen clash ruleset
+        shell: bash
+        run: |
+          set -euo pipefail
+          DOMAIN="gct-web.2ohk94g0olnm.eo.dnse1.com"
+          OUTFILE="ruleset/fuck-meituan.list"
+          TIMESTAMP="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          {
+            echo "# DO NOT EDIT MANUALLY"
+            echo "# Generated on ${TIMESTAMP}"
+            echo "# Source domain: ${DOMAIN}"
+            echo
+            {
+              dig +short "${DOMAIN}" A
+              dig +short "${DOMAIN}" AAAA
+            } | awk 'NF' | sort -u | while read -r ip; do
+              if [[ "${ip}" == *:* ]]; then
+                echo "IP-CIDR6,${ip}/128"
+              else
+                echo "IP-CIDR,${ip}/32"
+              fi
+            done
+          } > "${OUTFILE}"
+      - name: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: 'updated meituan blocklist'
+          branch: ${{ github.ref_name }}
