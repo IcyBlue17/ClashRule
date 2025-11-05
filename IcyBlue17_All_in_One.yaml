@@ -1,7 +1,21 @@
 proxy-groups:
   - name: Main
-    include-all: true
     type: select
+    url: https://ping.11451919.xyz
+    proxies:
+      - Auto
+      - Manual Selection
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - 🇺🇲 USA
+      - 🇸🇬 SGP
+  - name: Auto
+    type: url-test
+    include-all: true
+    url: https://ping.11451919.xyz
+  - name: Manual Selection
+    type: select
+    include-all: true
     url: https://ping.11451919.xyz
   - name: DNS
     type: select
@@ -17,6 +31,7 @@ proxy-groups:
       - 🇺🇲 USA
       - 🇸🇬 SGP
       - Main
+      - Auto
     type: select
   - name: Google
     include-all: true
@@ -107,6 +122,7 @@ proxy-groups:
       - 🇯🇵 JPN
       - 🇨🇳 TWN
       - Main
+      - Auto
   - name: Microsoft OneDrive
     type: select
     proxies:
@@ -114,6 +130,7 @@ proxy-groups:
       - 🇭🇰 HKG
       - 🇯🇵 JPN
       - Main
+      - Auto
   - name: Microsoft Services
     type: select
     proxies:
@@ -121,6 +138,7 @@ proxy-groups:
       - 🇭🇰 HKG
       - 🇯🇵 JPN
       - Main
+      - Auto
   - name: Apple
     type: select
     proxies:
@@ -129,6 +147,7 @@ proxy-groups:
       - 🇯🇵 JPN
       - 🇨🇳 TWN
       - Main
+      - Auto
   - name: Gaming
     type: select
     proxies:
@@ -137,18 +156,13 @@ proxy-groups:
       - 🇯🇵 JPN
       - SP
       - Main
+      - Auto
   - name: Strict Anti-AD
     type: select
     proxies:
       - DIRECT
       - REJECT
       - Main
-  - name: Final
-    type: select
-    proxies:
-      - Main
-      - SP
-      - DIRECT
   - name: 🇭🇰 HKG
     include-all: true
     filter: (?i)港|HK|Hong Kong|HongKong|hongkong
