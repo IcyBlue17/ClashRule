@@ -157,12 +157,6 @@ proxy-groups:
       - SP
       - Main
       - Auto
-  - name: Strict Anti-AD
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-      - Main
   - name: 🇭🇰 HKG
     include-all: true
     filter: (?i)港|HK|Hong Kong|HongKong|hongkong
@@ -436,14 +430,6 @@ rule-providers:
     format: text
     type: http
 
-  strict-antiad:
-    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/reject.list
-    path: ./ruleset/s-antiad.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-
   shabi-meituan:
     url: https://gh.11451919.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/MeiTuan/MeiTuan.list
     path: ./ruleset/meituan.list
@@ -487,7 +473,6 @@ rules:
   - "RULE-SET,LAN,DIRECT"
   - "RULE-SET,ip-r,REJECT"
   - "RULE-SET,PCDN,REJECT"
-  - "RULE-SET,strict-antiad,Strict Anti-AD"
   - "RULE-SET,Meituan-Overseas,REJECT"
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
