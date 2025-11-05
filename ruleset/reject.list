@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2025-11-05T12:45:48Z
+# Generated on 2025-11-05T13:05:03Z
 # Sources:
 # - NoMalwares (Quantumult X): https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf
 # - FuckRogueSoftwareRules (Quantumult X): https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf
@@ -5389,3 +5389,4 @@ IP-CIDR,42.81.232.18/32,no-resolve
 IP-CIDR,59.111.239.61/32,no-resolve
 IP-CIDR,59.111.239.62/32,no-resolve
 IP-CIDR,91.241.60.117/32,no-resolve
+AND,((PROTOCOL,UDP),(DOMAIN-SUFFIX,googlevideo.com))
