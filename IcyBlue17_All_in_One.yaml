@@ -87,6 +87,7 @@ proxy-groups:
       - SP
       - 🇭🇰 HKG
       - 🇯🇵 JPN
+      - 🇺🇲 USA
       - Main
   - name: BaseStream
     type: select
