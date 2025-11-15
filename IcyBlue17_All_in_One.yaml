@@ -51,6 +51,17 @@ proxy-groups:
       - Main
       - DIRECT
     type: select
+
+  - name: IP ATTR [CDN]
+    proxies:
+      - 🇺🇲 USA
+      - 🇯🇵 JPN
+      - 🇸🇬 SGP
+      - 🇨🇳 TWN
+      - 🇭🇰 HKG
+      - Main
+      - DIRECT
+    type: select
   - name: SP
     include-all: true
     type: select
@@ -479,8 +490,9 @@ rules:
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
-  - "RULE-SET,ip-d,DIRECT"
+  - "RULE-SET,ip-d,IP ATTR [CDN]"
   - "RULE-SET,ip-p,IP ATTR"
+  - "RULE-SET,Apple,Apple"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "GEOSITE,projectsekai,JP Games"
@@ -489,7 +501,6 @@ rules:
   - "RULE-SET,Bing,Microsoft Bing"
   - "RULE-SET,OneDrive,Microsoft OneDrive"
   - "RULE-SET,Microsoft,Microsoft Services"
-  - "RULE-SET,Apple,Apple"
   - "RULE-SET,YouTubeMusic,Music Platforms"
   - "RULE-SET,Spotify,Music Platforms"
   - "RULE-SET,YouTube,YouTube"
