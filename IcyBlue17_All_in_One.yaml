@@ -161,6 +161,18 @@ proxy-groups:
       - 🇨🇳 TWN
       - Main
       - Auto
+
+  - name: iCloud Private Relay
+    type: select
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 HKG
+      - 🇯🇵 JPN
+      - 🇨🇳 TWN
+      - 🇺🇸 USA
+      - Main
+      - Auto
   - name: Gaming
     type: select
     proxies:
@@ -480,6 +492,12 @@ rule-providers:
     format: text
     type: http
 
+  private-relay:
+    url: https://ruleset.11451919.xyz/ios_rule_script/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay.list
+    path: ./ruleset/icloudprivaterelay.list
+    behavior: classical
+    format: text
+    type: http
 
 
 rules:
@@ -492,6 +510,7 @@ rules:
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,ip-d,IP ATTR [CDN]"
   - "RULE-SET,ip-p,IP ATTR"
+  - "RULE-SET,private-relay,iCloud Private Relay"
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
