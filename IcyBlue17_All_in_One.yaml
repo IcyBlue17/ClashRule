@@ -164,7 +164,6 @@ proxy-groups:
 
   - name: iCloud Private Relay
     type: select
-    type: select
     proxies:
       - DIRECT
       - 🇭🇰 HKG
