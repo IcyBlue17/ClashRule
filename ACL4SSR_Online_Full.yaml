@@ -544,6 +544,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  apple-ai:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/apple-intelligence.list
+    path: ./ruleset/apple-ai.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"

@@ -497,6 +497,15 @@ rule-providers:
     format: text
     type: http
 
+  apple-ai:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/apple-intelligence.list
+    path: ./ruleset/apple-ai.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+
 
 rules:
   - "RULE-SET,LAN,DIRECT"
@@ -508,6 +517,7 @@ rules:
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,ip-d,IP ATTR [CDN]"
   - "RULE-SET,ip-p,IP ATTR"
+  - "RULE-SET,apple-ai,BaseAI"
   - "RULE-SET,private-relay,iCloud Private Relay"
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,China,DIRECT"
