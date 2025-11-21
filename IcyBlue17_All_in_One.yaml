@@ -26,14 +26,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
   - name: Twitter
-    proxies:
-      - 🇭🇰 HKG
-      - 🇯🇵 JPN
-      - 🇺🇲 USA
-      - 🇸🇬 SGP
-      - Main
-      - Auto
     type: select
+    include-all: true
+    url: https://ping.11451919.xyz
   - name: Google
     include-all: true
     type: select
