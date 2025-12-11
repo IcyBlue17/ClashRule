@@ -87,6 +87,9 @@ proxy-groups:
       - 🇸🇬 SGP
       - 🇨🇳 TWN
       - Main
+  - name: Hypixel
+    include-all: true
+    type: select
   - name: YouTube
     type: select
     proxies:
@@ -500,7 +503,13 @@ rule-providers:
     format: text
     type: http
 
-
+  hypixel:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/hypixel.list
+    path: ./ruleset/hyp.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
@@ -542,4 +551,5 @@ rules:
   - "RULE-SET,STUN,Main"
   - "DST-PORT,3478,Main"
   - "RULE-SET,shabi-meituan,DIRECT"
+  - "RULE-SET,hypixel,Hypixel"
   - "MATCH,Main"
