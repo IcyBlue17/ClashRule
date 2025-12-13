@@ -532,7 +532,7 @@ rules:
   - "RULE-SET,apple-ai,BaseAI"
   - "RULE-SET,private-relay,iCloud Private Relay"
   - "RULE-SET,Apple,Apple"
-  - "RULE_SET,stripe,Main"
+  - "RULE-SET,stripe,Main"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "GEOSITE,projectsekai,JP Games"
