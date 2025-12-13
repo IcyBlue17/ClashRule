@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2025-12-11T07:18:28Z
+# Generated on 2025-12-13T01:53:35Z
 # Sources:
 # - NoMalwares (Quantumult X): https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf
 # - FuckRogueSoftwareRules (Quantumult X): https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf
@@ -173,7 +173,6 @@ DOMAIN,vortex.data.msn.com
 DOMAIN,www.clarity.ms
 DOMAIN,www.iqiyi.space
 DOMAIN,www.qchannel04.cn
-DOMAIN,xhslive-video.xhscnd.com
 DOMAIN,yiliao.hupan.com
 DOMAIN,youkuad.com
 DOMAIN,yumenetworks.com
@@ -581,6 +580,7 @@ DOMAIN-SUFFIX,agd2.p.360.cn
 DOMAIN-SUFFIX,agent-proxy.baidu.com
 DOMAIN-SUFFIX,agoo-report.m.taobao.com
 DOMAIN-SUFFIX,agstat.html5.qq.com
+DOMAIN-SUFFIX,ahdohpiechei.com
 DOMAIN-SUFFIX,ai.login.umeng.com
 DOMAIN-SUFFIX,aic-report.volces.com
 DOMAIN-SUFFIX,aid.mobileservice.cn
@@ -5245,6 +5245,7 @@ DOMAIN-WILDCARD,*.zztfly.com
 DOMAIN-WILDCARD,ac*.*cloud.net.cn
 DOMAIN-WILDCARD,ad*.sina.com.cn
 DOMAIN-WILDCARD,ad.*.xiaomi.com
+DOMAIN-WILDCARD,ads-*.xhscdn.com
 DOMAIN-WILDCARD,adsense.*.qq.com
 DOMAIN-WILDCARD,api-*.mixpanel.com
 DOMAIN-WILDCARD,apm-log-upload-*.mihoyo.com
