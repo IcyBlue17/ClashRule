@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2025-12-13T10:50:58Z
+# Generated on 2025-12-20T11:08:00Z
 # Sources:
 # - NoMalwares (Quantumult X): https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf
 # - FuckRogueSoftwareRules (Quantumult X): https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf
@@ -5245,7 +5245,6 @@ DOMAIN-WILDCARD,*.zztfly.com
 DOMAIN-WILDCARD,ac*.*cloud.net.cn
 DOMAIN-WILDCARD,ad*.sina.com.cn
 DOMAIN-WILDCARD,ad.*.xiaomi.com
-DOMAIN-WILDCARD,ads-*.xhscdn.com
 DOMAIN-WILDCARD,adsense.*.qq.com
 DOMAIN-WILDCARD,api-*.mixpanel.com
 DOMAIN-WILDCARD,apm-log-upload-*.mihoyo.com
@@ -5352,7 +5351,6 @@ IP-CIDR,116.196.84.232/32,no-resolve
 IP-CIDR,117.177.248.17/32,no-resolve
 IP-CIDR,117.177.248.41/32,no-resolve
 IP-CIDR,118.89.204.198/23,no-resolve
-IP-CIDR,119.29.29.80/28
 IP-CIDR,119.29.29.98/32,no-resolve
 IP-CIDR,119.29.29.99/32,no-resolve
 IP-CIDR,121.36.6.165/32,no-resolve
