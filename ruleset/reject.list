@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2025-12-20T11:08:00Z
+# Generated on 2026-01-04T07:38:25Z
 # Sources:
 # - NoMalwares (Quantumult X): https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf
 # - FuckRogueSoftwareRules (Quantumult X): https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf
@@ -119,9 +119,7 @@ DOMAIN,log.outbrainimg.com
 DOMAIN,logcollection.ronghub.com
 DOMAIN,loggly.com
 DOMAIN,logonext.tv.kuyun.com
-DOMAIN,lookaside.instagram.com
 DOMAIN,match.p4p.1688.com
-DOMAIN,mediacloud.xiaohongshu.com
 DOMAIN,medusa.dianping.com
 DOMAIN,metis-er.ele.me
 DOMAIN,monitor.geetest.com
@@ -165,7 +163,6 @@ DOMAIN,tracking.purchasely.io
 DOMAIN,transparency.meta.com
 DOMAIN,u.ucfly.com
 DOMAIN,u1.img.mobile.sina.cn
-DOMAIN,upos-sz-staticcos.bilivideo.com
 DOMAIN,us.ad.lgsmartad.com
 DOMAIN,us.lgsmartad.com
 DOMAIN,video.ktkjmp.com
@@ -1291,7 +1288,6 @@ DOMAIN-SUFFIX,channel-analysis-js.gmw.cn
 DOMAIN-SUFFIX,chat1.jd.com
 DOMAIN-SUFFIX,chatapp.adjust.com
 DOMAIN-SUFFIX,chatenabled.mail.google.com
-DOMAIN-SUFFIX,checks.google.com
 DOMAIN-SUFFIX,choice.microsoft.com
 DOMAIN-SUFFIX,choice.microsoft.com.nsatc.net
 DOMAIN-SUFFIX,chua.umeng.com
@@ -1402,7 +1398,6 @@ DOMAIN-SUFFIX,connect.facebook.com
 DOMAIN-SUFFIX,connect.facebook.net
 DOMAIN-SUFFIX,consent.adjust.cn
 DOMAIN-SUFFIX,consent.adjust.world
-DOMAIN-SUFFIX,content-storage-upload.googleapis.com
 DOMAIN-SUFFIX,content.appsflyer.com
 DOMAIN-SUFFIX,content.experience.appsflyer.com
 DOMAIN-SUFFIX,contribute.to-support.me
@@ -1496,6 +1491,7 @@ DOMAIN-SUFFIX,d.adsplay.net
 DOMAIN-SUFFIX,d.adsplay.xyz
 DOMAIN-SUFFIX,d.cpufan.club
 DOMAIN-SUFFIX,d.g.mi.com
+DOMAIN-SUFFIX,d.meituan.net
 DOMAIN-SUFFIX,d.mob.com
 DOMAIN-SUFFIX,d.toutiao.com
 DOMAIN-SUFFIX,d0.sina.com.cn
@@ -3293,7 +3289,6 @@ DOMAIN-SUFFIX,nbsdk-baichuan.taobao.com
 DOMAIN-SUFFIX,nch-software.info
 DOMAIN-SUFFIX,nearby.3g.qq.com
 DOMAIN-SUFFIX,neirong.baidu.com
-DOMAIN-SUFFIX,neixin.cn
 DOMAIN-SUFFIX,neo-nlp.hismarttv.com
 DOMAIN-SUFFIX,neptune-api.volces.com
 DOMAIN-SUFFIX,neptune.appads.com
@@ -5094,7 +5089,7 @@ DOMAIN-WILDCARD,*.atm.youku.com
 DOMAIN-WILDCARD,*.baidu.cn
 DOMAIN-WILDCARD,*.baidu.com
 DOMAIN-WILDCARD,*.bda.ndmdhs.com
-DOMAIN-WILDCARD,*.biligame.com
+DOMAIN-WILDCARD,*.bilivideo.com
 DOMAIN-WILDCARD,*.blob.core.windows.net
 DOMAIN-WILDCARD,*.boc.cn
 DOMAIN-WILDCARD,*.browser.miui.com
@@ -5122,7 +5117,6 @@ DOMAIN-WILDCARD,*.com.hw.1.oppo.cn
 DOMAIN-WILDCARD,*.cs.pp.cn
 DOMAIN-WILDCARD,*.cupid.iqiyi.com
 DOMAIN-WILDCARD,*.cupid.qiyi.com
-DOMAIN-WILDCARD,*.d.meituan.net
 DOMAIN-WILDCARD,*.da.hunantv.com
 DOMAIN-WILDCARD,*.dingtalk.com
 DOMAIN-WILDCARD,*.diwodiwo.xyz
@@ -5238,6 +5232,7 @@ DOMAIN-WILDCARD,*.whatsapp.net
 DOMAIN-WILDCARD,*.wns.windows.com
 DOMAIN-WILDCARD,*.xhscdn.com
 DOMAIN-WILDCARD,*.xhscdn.com.w.cdngslb.com
+DOMAIN-WILDCARD,*.xiaohongshu.com
 DOMAIN-WILDCARD,*.yes.youku.com
 DOMAIN-WILDCARD,*.youku.com
 DOMAIN-WILDCARD,*.yunos.com
@@ -5251,7 +5246,6 @@ DOMAIN-WILDCARD,apm-log-upload-*.mihoyo.com
 DOMAIN-WILDCARD,bdcpro*.techweb.com.cn
 DOMAIN-WILDCARD,c.*.msn.com
 DOMAIN-WILDCARD,casestudy.*.qq.com
-DOMAIN-WILDCARD,cloudusersettings-pa.*.google.com
 DOMAIN-WILDCARD,collect.*.miui.com
 DOMAIN-WILDCARD,counter*.sextracker.be
 DOMAIN-WILDCARD,d*.sina.com.cn
@@ -5279,6 +5273,7 @@ DOMAIN-WILDCARD,log*.optimizely.com
 DOMAIN-WILDCARD,log*.sina.cn
 DOMAIN-WILDCARD,log-v*.mmstat.com
 DOMAIN-WILDCARD,mistat.*.xiaomi.com
+DOMAIN-WILDCARD,ogads-pa.*.google.com
 DOMAIN-WILDCARD,p2p*.qq.com
 DOMAIN-WILDCARD,p2p-*.douyucdn.cn
 DOMAIN-WILDCARD,p2pchunk-*.douyucdn.cn
