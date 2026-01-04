@@ -60,6 +60,9 @@ proxy-groups:
   - name: SP
     include-all: true
     type: select
+
+
+
   - name: DC1
     type: select
     proxies:
@@ -519,6 +522,14 @@ rule-providers:
     format: text
     type: http
 
+  GameDLCDN:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/game-dl-cdn.list
+    path: ./ruleset/game-dl-cdn.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
 rules:
   - "RULE-SET,LAN,DIRECT"
   - "RULE-SET,ip-r,REJECT"
@@ -527,6 +538,7 @@ rules:
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
+  - "RULE-SET,GameDLCDN,DIRECT"
   - "RULE-SET,ip-d,IP ATTR [CDN]"
   - "RULE-SET,ip-p,IP ATTR"
   - "RULE-SET,apple-ai,BaseAI"
