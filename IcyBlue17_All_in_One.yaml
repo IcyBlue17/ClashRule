@@ -352,7 +352,7 @@ rule-providers:
     type: http
 
   SteamCN:
-    url: https://ruleset.11451919.xyz/ios_rule_script//rule/Clash/SteamCN/SteamCN.list
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/SteamCN.list
     path: ./ruleset/SteamCN.list
     behavior: classical
     interval: 86400
