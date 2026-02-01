@@ -506,6 +506,14 @@ rule-providers:
     format: text
     type: http
 
+  arknights-endfield:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/arknights-endfield.list
+    path: ./ruleset/arknights-endfield.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
   hypixel:
     url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/hypixel.list
     path: ./ruleset/hyp.list
@@ -567,6 +575,7 @@ rules:
   - "RULE-SET,Origin,Gaming"
   - "RULE-SET,Epic,Gaming"
   - "RULE-SET,Games,Gaming"
+  - "RULE-SET,arknights-endfield,Gaming"
   - "RULE-SET,Emby,Emby"
   - "PROCESS-NAME,mosdns,DNS"
   - "RULE-SET,STUN,Main"
