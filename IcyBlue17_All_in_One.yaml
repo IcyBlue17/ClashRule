@@ -563,7 +563,7 @@ rules:
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,stripe,Main"
   - "RULE-SET,Oracle,Main"
-  - "RULE-SET,Gryphline,Main"
+  - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "GEOSITE,projectsekai,JP Games"
