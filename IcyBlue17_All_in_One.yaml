@@ -530,6 +530,23 @@ rule-providers:
     format: text
     type: http
 
+  Oracle:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Oracle/Oracle.list
+    path: ./ruleset/Oracle.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+    
+  Gryphline:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/fuck-gryphline.list
+    path: ./ruleset/fuck-gryphline.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+
 rules:
   - "RULE-SET,LAN,DIRECT"
   - "RULE-SET,ip-r,REJECT"
@@ -545,6 +562,8 @@ rules:
   - "RULE-SET,private-relay,iCloud Private Relay"
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,stripe,Main"
+  - "RULE-SET,Oracle,Main"
+  - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "GEOSITE,projectsekai,JP Games"
