@@ -239,6 +239,14 @@ rule-providers:
     format: text
     type: http
 
+  Apple-Music:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/github.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/apple-music.list
+    path: ./ruleset/apple-music.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
   Microsoft:
     url: https://ruleset.11451919.xyz/ios_rule_script//rule/Clash/Microsoft/Microsoft.list
     path: ./ruleset/Microsoft.list
@@ -506,6 +514,14 @@ rule-providers:
     format: text
     type: http
 
+  arknights-endfield:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/arknights-endfield.list
+    path: ./ruleset/arknights-endfield.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
   hypixel:
     url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/hypixel.list
     path: ./ruleset/hyp.list
@@ -537,14 +553,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-    
-  Gryphline:
-    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/fuck-gryphline.list
-    path: ./ruleset/fuck-gryphline.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
 
 
 rules:
@@ -563,7 +571,6 @@ rules:
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,stripe,Main"
   - "RULE-SET,Oracle,Main"
-  - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "GEOSITE,projectsekai,JP Games"
@@ -574,6 +581,7 @@ rules:
   - "RULE-SET,Microsoft,Microsoft Services"
   - "RULE-SET,YouTubeMusic,Music Platforms"
   - "RULE-SET,Spotify,Music Platforms"
+  - "RULE-SET,Apple-Music,Music Platforms"
   - "RULE-SET,YouTube,YouTube"
   - "RULE-SET,GoogleVoice,GoogleVoice"
   - "RULE-SET,Gemini,BaseAI"
@@ -586,6 +594,7 @@ rules:
   - "RULE-SET,Origin,Gaming"
   - "RULE-SET,Epic,Gaming"
   - "RULE-SET,Games,Gaming"
+  - "RULE-SET,arknights-endfield,Gaming"
   - "RULE-SET,Emby,Emby"
   - "PROCESS-NAME,mosdns,DNS"
   - "RULE-SET,STUN,Main"

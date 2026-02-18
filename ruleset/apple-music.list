@@ -1,0 +1,13 @@
+# Self Upload Music
+- DOMAIN-SUFFIX,downloaddispatch.itunes.apple.com
+# Apple Podcasts & Radio
+- DOMAIN-SUFFIX,itsliveradio.apple.com
+# Apple Device Certificate for Podcasts & Radio
+- DOMAIN-SUFFIX,aodp-ssl.apple.com
+# TeleVision & Movie Trailer
+- DOMAIN-SUFFIX,video-ssl.itunes.apple.com
+# iTunes Store
+- DOMAIN-SUFFIX,hls-amt.itunes.apple.com
+- DOMAIN-SUFFIX,homesharing.itunes.apple.com
+# iCloud
+- DOMAIN-SUFFIX,cabana-server.cdn-apple.com
