@@ -240,7 +240,7 @@ rule-providers:
     type: http
 
   Apple-Music:
-    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/apple-music.list
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/apple-music.list
     path: ./ruleset/apple-music.list
     behavior: classical
     interval: 86400
