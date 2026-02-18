@@ -1,0 +1,14 @@
+# Self Upload Music
+- DOMAIN-SUFFIX,downloaddispatch.itunes.apple.com
+- DOMAIN-SUFFIX,audio.itunes.apple.com
+# Beats 1
+- DOMAIN-SUFFIX,itsliveradio.apple.com
+- DOMAIN-SUFFIX,aodp-ssl.apple.com
+# TeleVision & Movie Trailer
+- DOMAIN-SUFFIX,video-ssl.itunes.apple.com
+- DOMAIN-SUFFIX,mvod.itunes.apple.com
+# iTunes Store
+- DOMAIN-SUFFIX,hls-amt.itunes.apple.com
+- DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
+- DOMAIN-SUFFIX,streamingaudio.itunes.apple.com
+- DOMAIN-SUFFIX,homesharing.itunes.apple.com
