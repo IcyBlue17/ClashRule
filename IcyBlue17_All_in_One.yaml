@@ -239,6 +239,14 @@ rule-providers:
     format: text
     type: http
 
+  Apple-Music:
+    url: https://gh.11451919.xyz/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/apple-music.list
+    path: ./ruleset/apple-music.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
   Microsoft:
     url: https://ruleset.11451919.xyz/ios_rule_script//rule/Clash/Microsoft/Microsoft.list
     path: ./ruleset/Microsoft.list
@@ -545,14 +553,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-    
-  Gryphline:
-    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/fuck-gryphline.list
-    path: ./ruleset/fuck-gryphline.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
 
 
 rules:
@@ -582,6 +582,7 @@ rules:
   - "RULE-SET,Microsoft,Microsoft Services"
   - "RULE-SET,YouTubeMusic,Music Platforms"
   - "RULE-SET,Spotify,Music Platforms"
+  - "RULE-SET,Apple-Music,Music Platforms"
   - "RULE-SET,YouTube,YouTube"
   - "RULE-SET,GoogleVoice,GoogleVoice"
   - "RULE-SET,Gemini,BaseAI"
