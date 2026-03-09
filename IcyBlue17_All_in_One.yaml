@@ -548,6 +548,7 @@ rules:
   - "RULE-SET,shabi-meituan,DIRECT"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
+  - "ASN,32590,Gaming"
   - "DST-PORT,22,SSH"
   - "GEOSITE,projectsekai,JP Games"
   - "RULE-SET,dmm,JP Games"
