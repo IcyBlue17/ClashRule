@@ -427,6 +427,14 @@ rule-providers:
     format: text
     type: http
 
+  Claude:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Claude/Claude.list
+    path: ./ruleset/Claude.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
   GlobalMedia:
     url: https://ruleset.11451919.xyz/ios_rule_script//rule/Clash/GlobalMedia/GlobalMedia.list
     path: ./ruleset/GlobalMedia.list
@@ -562,6 +570,7 @@ rules:
   - "RULE-SET,YouTube,YouTube"
   - "RULE-SET,Google,Google"
   - "RULE-SET,OpenAI,BaseAI"
+  - "RULE-SET,Claude,BaseAI"
   - "RULE-SET,Spotify,Music Platforms"
   - "RULE-SET,GlobalMedia,BaseStream"
   - "RULE-SET,Emby,Emby"
