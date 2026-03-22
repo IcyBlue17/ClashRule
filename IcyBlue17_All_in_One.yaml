@@ -547,7 +547,6 @@ rules:
   - "RULE-SET,GameDLCDN,DIRECT"
   - "RULE-SET,ip-d,IP ATTR [CDN]"
   - "RULE-SET,ip-p,IP ATTR"
-  - "RULE-SET,apple-ai,BaseAI"
   - "RULE-SET,private-relay,iCloud Private Relay"
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,stripe,Main"
