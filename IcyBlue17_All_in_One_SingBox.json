@@ -1,0 +1,1151 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true,
+      "store_rdrc": true,
+      "rdrc_timeout": "7d"
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "dashboard",
+      "external_ui_download_url": "",
+      "external_ui_download_detour": "DIRECT",
+      "secret": "",
+      "default_mode": "rule",
+      "access_control_allow_origin": [
+        "*"
+      ],
+      "access_control_allow_private_network": false
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_local",
+        "type": "udp",
+        "server": "127.0.0.1",
+        "server_port": 53
+      },
+      {
+        "tag": "dns_remote",
+        "type": "udp",
+        "server": "127.0.0.1",
+        "server_port": 53
+      },
+      {
+        "tag": "dns_fakeip",
+        "type": "fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "action": "route",
+        "clash_mode": "direct",
+        "server": "dns_local"
+      },
+      {
+        "action": "route",
+        "clash_mode": "global",
+        "server": "dns_remote"
+      },
+      {
+        "action": "reject",
+        "query_type": [
+          "HTTPS",
+          "SVCB"
+        ]
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ChinaMax",
+          "Lan"
+        ],
+        "server": "dns_local"
+      },
+      {
+        "action": "route",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns_fakeip",
+        "rewrite_ttl": 1
+      }
+    ],
+    "final": "dns_local",
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    },
+    {
+      "type": "dns",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 1053
+    },
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "singbox",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Main",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "Auto",
+        "Manual Selection",
+        "SP",
+        "🇭🇰 HKG",
+        "🇨🇳 TWN",
+        "🇯🇵 JPN",
+        "🇺🇲 USA",
+        "🇸🇬 SGP",
+        "🇪🇺 EUR",
+        "DIRECT"
+      ],
+      "default": "Auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "Auto",
+      "outbounds": [],
+      "url": "https://detectportal.firefox.com/success.txt",
+      "interval": "3m",
+      "tolerance": 50,
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "selector",
+      "tag": "Manual Selection",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "SP",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "🇭🇰 HKG",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "🇨🇳 TWN",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "🇯🇵 JPN",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "🇺🇲 USA",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "🇸🇬 SGP",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "🇪🇺 EUR",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "IP ATTR",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇺🇲 USA",
+        "🇯🇵 JPN",
+        "🇸🇬 SGP",
+        "🇨🇳 TWN",
+        "🇭🇰 HKG",
+        "Main",
+        "DIRECT"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "IP ATTR [CDN]",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇺🇲 USA",
+        "🇯🇵 JPN",
+        "🇸🇬 SGP",
+        "🇨🇳 TWN",
+        "🇭🇰 HKG",
+        "Main",
+        "DIRECT"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Apple",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "DIRECT",
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "🇨🇳 TWN",
+        "Main",
+        "Auto"
+      ],
+      "default": "DIRECT"
+    },
+    {
+      "type": "selector",
+      "tag": "iCloud Private Relay",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "DIRECT",
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "🇨🇳 TWN",
+        "Main",
+        "Auto"
+      ],
+      "default": "DIRECT"
+    },
+    {
+      "type": "selector",
+      "tag": "Microsoft Bing",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "DIRECT",
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "🇨🇳 TWN",
+        "Main",
+        "Auto"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Microsoft OneDrive",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "DIRECT",
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "Main",
+        "Auto"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Microsoft Services",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "DIRECT",
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "Main",
+        "Auto"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Google",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "GoogleVoice",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "YouTube",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "SP",
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "🇺🇲 USA",
+        "Main"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Twitter",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "BaseAI",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇺🇲 USA",
+        "🇯🇵 JPN",
+        "🇸🇬 SGP",
+        "🇨🇳 TWN",
+        "Main"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "BaseStream",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "🇸🇬 SGP",
+        "🇨🇳 TWN",
+        "Main"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Music Platforms",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "🇸🇬 SGP",
+        "🇨🇳 TWN",
+        "SP"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Emby",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "DC1",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇯🇵 JPN",
+        "🇺🇲 USA",
+        "🇭🇰 HKG",
+        "Main"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "DC24",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇭🇰 HKG",
+        "🇪🇺 EUR",
+        "Main"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "DC5",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇸🇬 SGP",
+        "🇭🇰 HKG",
+        "Main"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "Gaming",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "DIRECT",
+        "🇭🇰 HKG",
+        "🇯🇵 JPN",
+        "SP",
+        "Main",
+        "Auto"
+      ],
+      "default": "Main"
+    },
+    {
+      "type": "selector",
+      "tag": "JP Games",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "Hypixel",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "SSH",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "DNS",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "direct",
+      "tag": "DIRECT"
+    },
+    {
+      "type": "block",
+      "tag": "REJECT"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "Main",
+    "default_domain_resolver": {
+      "server": "dns_local"
+    },
+    "rules": [
+      {
+        "action": "sniff",
+        "inbound": "tun-in"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "action": "route",
+        "clash_mode": "direct",
+        "outbound": "DIRECT"
+      },
+      {
+        "action": "route",
+        "clash_mode": "global",
+        "outbound": "Main"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Lan"
+        ],
+        "outbound": "DIRECT"
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "ip-r"
+        ]
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "PCDN"
+        ]
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "Meituan-Overseas"
+        ]
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "ZhihuAds"
+        ]
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "BlockHttpDNS"
+        ]
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "SteamCN"
+        ],
+        "outbound": "DIRECT"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GameDLCDN"
+        ],
+        "outbound": "DIRECT"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ip-d"
+        ],
+        "outbound": "IP ATTR [CDN]"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ip-p"
+        ],
+        "outbound": "IP ATTR"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "iCloudPrivateRelay"
+        ],
+        "outbound": "iCloud Private Relay"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Apple"
+        ],
+        "outbound": "Apple"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Stripe"
+        ],
+        "outbound": "Main"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Oracle"
+        ],
+        "outbound": "Main"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Gryphline"
+        ],
+        "outbound": "Gaming"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "MeiTuan"
+        ],
+        "outbound": "DIRECT"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ChinaMax"
+        ],
+        "outbound": "DIRECT"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Steam"
+        ],
+        "outbound": "Gaming"
+      },
+      {
+        "action": "route",
+        "port": 22,
+        "outbound": "SSH"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ProjectSekai"
+        ],
+        "outbound": "JP Games"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "DMM"
+        ],
+        "outbound": "JP Games"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Bing"
+        ],
+        "outbound": "Microsoft Bing"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "OneDrive"
+        ],
+        "outbound": "Microsoft OneDrive"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Microsoft"
+        ],
+        "outbound": "Microsoft Services"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Twitter"
+        ],
+        "outbound": "Twitter"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GoogleVoice"
+        ],
+        "outbound": "GoogleVoice"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Gemini"
+        ],
+        "outbound": "BaseAI"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "YouTubeMusic"
+        ],
+        "outbound": "Music Platforms"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "YouTube"
+        ],
+        "outbound": "YouTube"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Google"
+        ],
+        "outbound": "Google"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "OpenAI",
+          "Claude"
+        ],
+        "outbound": "BaseAI"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Spotify"
+        ],
+        "outbound": "Music Platforms"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GlobalMedia"
+        ],
+        "outbound": "BaseStream"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Emby"
+        ],
+        "outbound": "Emby"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "TelegramUS"
+        ],
+        "outbound": "DC1"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "TelegramNL"
+        ],
+        "outbound": "DC24"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "TelegramSG"
+        ],
+        "outbound": "DC5"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Origin",
+          "Epic",
+          "Game"
+        ],
+        "outbound": "Gaming"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Hypixel"
+        ],
+        "outbound": "Hypixel"
+      },
+      {
+        "action": "route",
+        "process_name": [
+          "mosdns"
+        ],
+        "outbound": "DNS"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "STUN"
+        ],
+        "outbound": "Main"
+      },
+      {
+        "action": "route",
+        "port": 3478,
+        "outbound": "Main"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "inline",
+        "tag": "PCDN",
+        "rules": [
+          {
+            "domain": [
+              "tp2p.kg.qq.com"
+            ]
+          },
+          {
+            "domain_keyword": [
+              "p2p.douyucdn.cn",
+              "p2p.qq.com",
+              "pcdn.biliapi.net",
+              "pcdn.youku.com"
+            ]
+          },
+          {
+            "domain_suffix": [
+              "bsccdn.net",
+              "dyp2p-ali.douyucdn.cn",
+              "dyp2p-hw.douyucdn.cn",
+              "gjfzpt.cn",
+              "jomodns.cn",
+              "kuiniuca.com",
+              "mcdn.bilivideo.cn",
+              "mcdn.bilivideo.com",
+              "onethingpcs.com",
+              "p2p-ali.douyucdn.cn",
+              "p2p.huya.com",
+              "p2p.qq.com",
+              "p2pchunk-hw.douyucdn.cn",
+              "p2pchunk-table.douyucdn.cn",
+              "p2pchunk-ws.douyucdn.cn",
+              "p2perrorlog.douyucdn.cn",
+              "p2plive-ali.douyucdn.cn",
+              "p2plive-ws.douyucdn.cn",
+              "p2plog.douyucdn.cn",
+              "p2ptun.qq.com",
+              "p2pupdate.gamedl.qq.com",
+              "p2pupgrade.gamedl.qq.com",
+              "p2pvod-ws.douyucdn.cn",
+              "pcdn.xmcdn.com",
+              "pcdn.yximgs.com",
+              "pkoplink.com",
+              "httpdns.bilivideo.com",
+              "saxysec.com",
+              "stun.douyucdn.cn",
+              "stun.hitv.com",
+              "stun1.douyucdn.cn",
+              "szbdyd.com",
+              "tpa-hcdn.iqiyi.com",
+              "uhabo.com",
+              "xycdn.com"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "GameDLCDN",
+        "rules": [
+          {
+            "domain_suffix": [
+              "steamserver.net",
+              "connect.epicgames.dev"
+            ]
+          },
+          {
+            "domain": [
+              "launcher-public-service-prod06.ol.epicgames.com"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "Meituan-Overseas",
+        "rules": [
+          {
+            "ip_cidr": [
+              "43.175.252.139/32",
+              "43.175.253.139/32"
+            ]
+          },
+          {
+            "ip_cidr": [
+              "240d:c010:c8:1::8f/128"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "Gryphline",
+        "rules": [
+          {
+            "domain_suffix": [
+              "gryphline.com"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "Hypixel",
+        "rules": [
+          {
+            "domain_suffix": [
+              "hypixel.net"
+            ]
+          },
+          {
+            "ip_cidr": [
+              "209.222.114.0/23"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "ip-r",
+        "rules": []
+      },
+      {
+        "type": "inline",
+        "tag": "ip-p",
+        "rules": []
+      },
+      {
+        "type": "inline",
+        "tag": "ip-d",
+        "rules": []
+      },
+      {
+        "type": "remote",
+        "tag": "ProjectSekai",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-projectsekai.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "DMM",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/DMM/DMM.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Lan",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Lan/Lan.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "type": "remote",
+        "tag": "STUN",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "BlockHttpDNS",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "ZhihuAds",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/ZhihuAds/ZhihuAds.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Steam",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Steam/Steam.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "SteamCN",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/SteamCN/SteamCN.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "type": "remote",
+        "tag": "iCloudPrivateRelay",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/iCloudPrivateRelay/iCloudPrivateRelay.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "type": "remote",
+        "tag": "Apple",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Apple/Apple.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "type": "remote",
+        "tag": "MeiTuan",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/MeiTuan/MeiTuan.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "type": "remote",
+        "tag": "ChinaMax",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/ChinaMax/ChinaMax.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "type": "remote",
+        "tag": "Stripe",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Stripe/Stripe.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Oracle",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Oracle/Oracle.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Bing",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Bing/Bing.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "OneDrive",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/OneDrive/OneDrive.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Microsoft",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Microsoft/Microsoft.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Twitter",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Twitter/Twitter.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "GoogleVoice",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/GoogleVoice/GoogleVoice.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Gemini",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Gemini/Gemini.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "YouTubeMusic",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/YouTubeMusic/YouTubeMusic.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "YouTube",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/YouTube/YouTube.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Google",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Google/Google.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "OpenAI",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/OpenAI/OpenAI.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Claude",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Claude/Claude.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Spotify",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Spotify/Spotify.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "GlobalMedia",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/GlobalMedia/GlobalMedia.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Emby",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Emby/Emby.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "TelegramUS",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/TelegramUS/TelegramUS.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "TelegramNL",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/TelegramNL/TelegramNL.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "TelegramSG",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/TelegramSG/TelegramSG.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Origin",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Origin/Origin.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Epic",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Epic/Epic.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Game",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Game/Game.srs",
+        "download_detour": "Main"
+      }
+    ]
+  }
+}
