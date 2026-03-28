@@ -1,5 +1,5 @@
 # Self Upload Music
-- DOMAIN-SUFFIX,downloaddispatch.itunes.apple.com
+- DOMAIN-SUFFIX,blobstore.apple.com
 # Apple Podcasts & Radio
 - DOMAIN-SUFFIX,itsliveradio.apple.com
 # Apple Device Certificate for Podcasts & Radio
