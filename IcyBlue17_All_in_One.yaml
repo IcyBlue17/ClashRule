@@ -275,6 +275,12 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Meituan-Overseas:
+    url: https://ruleset.11451919.xyz/ClashRule/ruleset/fuck-meituan.list
+    path: ./ruleset/fkmt.list
+    behavior: classical
+    format: text
+    type: http
   ip-r:
     url: https://ruleset.11451919.xyz/anti-ip-attribution/generated/rule-set-reject.list
     path: ./ruleset/IPATTR-R.list
@@ -300,6 +306,13 @@ rule-providers:
   GameDLCDN:
     url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/game-dl-cdn.list
     path: ./ruleset/game-dl-cdn.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  shabi-meituan:
+    url: https://ruleset.11451919.xyz/ios_rule_script/rule/Shadowrocket/MeiTuan/MeiTuan.list
+    path: ./ruleset/meituan.list
     behavior: classical
     interval: 86400
     format: text
@@ -527,6 +540,7 @@ rules:
   - "RULE-SET,LAN,DIRECT"
   - "RULE-SET,ip-r,REJECT"
   - "RULE-SET,PCDN,REJECT"
+  - "RULE-SET,Meituan-Overseas,REJECT"
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
@@ -538,6 +552,7 @@ rules:
   - "RULE-SET,stripe,Main"
   - "RULE-SET,Oracle,Main"
   - "RULE-SET,Gryphline,Gaming"
+  - "RULE-SET,shabi-meituan,DIRECT"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "IP-ASN,32590,Gaming"
