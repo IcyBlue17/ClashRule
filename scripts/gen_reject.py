@@ -42,11 +42,6 @@ SOURCES: Sequence[Source] = (
         description="NoMalwares (Quantumult X)",
     ),
     Source(
-        kind="quanx",
-        url="https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf",
-        description="FuckRogueSoftwareRules (Quantumult X)",
-    ),
-    Source(
         kind="surge",
         url="https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/reject-no-drop.conf",
         description="Reject No Drop (Surge)",
