@@ -397,11 +397,12 @@ rule-providers:
     format: text
     type: http
 
-  BaseAI-Rules:
-    type: file
+  BaseAI:
+    url: https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/BaseAI.list
     path: ./ruleset/BaseAI.list
     behavior: classical
     format: text
+    type: http
 
   Twitter:
     url: https://ruleset.11451919.xyz/ios_rule_script//rule/Clash/Twitter/Twitter.list
@@ -543,7 +544,7 @@ rules:
   - "RULE-SET,Microsoft,Microsoft Services"
   - "RULE-SET,Twitter,Twitter"
   - "RULE-SET,GoogleVoice,GoogleVoice"
-  - "RULE-SET,BaseAI-Rules,BaseAI"
+  - "RULE-SET,BaseAI,BaseAI"
   - "RULE-SET,YouTubeMusic,Music Platforms"
   - "RULE-SET,YouTube,YouTube"
   - "RULE-SET,Google,Google"
