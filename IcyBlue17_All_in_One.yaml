@@ -296,6 +296,20 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  GeoIP-CN-v4:
+    url: https://ruleset.11451919.xyz/ClashRule/ruleset/geoip-cn-v4.list
+    path: ./ruleset/geoip-cn-v4.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  GeoIP-CN-v6:
+    url: https://ruleset.11451919.xyz/ClashRule/ruleset/geoip-cn-v6.list
+    path: ./ruleset/geoip-cn-v6.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   SteamCN:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list
     path: ./ruleset/SteamCN.list
@@ -531,6 +545,8 @@ rules:
   - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,shabi-meituan,DIRECT"
   - "RULE-SET,China,DIRECT"
+  - "RULE-SET,GeoIP-CN-v4,DIRECT"
+  - "RULE-SET,GeoIP-CN-v6,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "IP-ASN,32590,Gaming"
   - "DST-PORT,27015-27200,Gaming"
