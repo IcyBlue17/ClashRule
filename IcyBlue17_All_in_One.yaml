@@ -324,14 +324,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  shabi-meituan:
-    url: https://ruleset.11451919.xyz/ios_rule_script/rule/Shadowrocket/MeiTuan/MeiTuan.list
-    path: ./ruleset/meituan.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-
   ip-p:
     url: https://ruleset.11451919.xyz/anti-ip-attribution/generated/rule-set-proxy.list
     path: ./ruleset/IPATTR-P.list
@@ -543,11 +535,8 @@ rules:
   - "RULE-SET,stripe,Main"
   - "RULE-SET,Oracle,Main"
   - "RULE-SET,Gryphline,Gaming"
-  - "RULE-SET,shabi-meituan,DIRECT"
-  - "RULE-SET,China,DIRECT"
   - "RULE-SET,GeoIP-CN-v4,DIRECT"
   - "RULE-SET,GeoIP-CN-v6,DIRECT"
-  - "GEOIP,CN,DIRECT"
   - "IP-ASN,32590,Gaming"
   - "DST-PORT,27015-27200,Gaming"
   - "DST-PORT,30000-32000,Gaming"
