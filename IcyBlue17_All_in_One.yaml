@@ -289,20 +289,6 @@ rule-providers:
     format: text
     type: http
 
-  cnv4:
-    url: https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/geoip-cn-v4.list
-    path: ./ruleset/geoip-cn-v4.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  cnv6:
-    url: https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/geoip-cn-v6.list
-    path: ./ruleset/geoip-cn-v6.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   China:
     url: https://ruleset.11451919.xyz/ios_rule_script//rule/Clash/ChinaMax/ChinaMax.list
     path: ./ruleset/China.list
@@ -535,9 +521,8 @@ rules:
   - "RULE-SET,stripe,Main"
   - "RULE-SET,Oracle,Main"
   - "RULE-SET,Gryphline,Gaming"
-  - "RULE-SET,cnv4,DIRECT"
-  - "RULE-SET,cnv6,DIRECT"
-  - "RULE-SET,CN,DIRECT"
+  - "RULE-SET,China,DIRECT"
+  - "GEOIP,CN,DIRECT"
   - "IP-ASN,32590,Gaming"
   - "DST-PORT,27015-27200,Gaming"
   - "DST-PORT,30000-32000,Gaming"
