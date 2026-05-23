@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-05-23T06:27:39Z
+# Generated on 2026-05-23T12:55:59Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v4.txt
 # Total: 3928
 
@@ -1078,7 +1078,7 @@ IP-CIDR,103.111.172.0/22,no-resolve
 IP-CIDR,103.113.4.0/22,no-resolve
 IP-CIDR,103.114.100.0/22,no-resolve
 IP-CIDR,103.114.212.0/23,no-resolve
-IP-CIDR,103.114.236.0/24,no-resolve
+IP-CIDR,103.114.236.0/22,no-resolve
 IP-CIDR,103.115.92.0/22,no-resolve
 IP-CIDR,103.115.120.0/22,no-resolve
 IP-CIDR,103.115.248.0/22,no-resolve
