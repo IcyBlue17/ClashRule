@@ -1,7 +1,7 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-05-24T06:53:19Z
+# Generated on 2026-05-25T08:11:08Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v6.txt
-# Total: 944
+# Total: 943
 
 IP-CIDR6,2001:250::/30,no-resolve
 IP-CIDR6,2001:255::/32,no-resolve
@@ -57,7 +57,6 @@ IP-CIDR6,2400:9380:8040::/48,no-resolve
 IP-CIDR6,2400:9380:8140::/48,no-resolve
 IP-CIDR6,2400:9380:8201::/48,no-resolve
 IP-CIDR6,2400:9380:8301::/48,no-resolve
-IP-CIDR6,2400:9580::/48,no-resolve
 IP-CIDR6,2400:95e0::/48,no-resolve
 IP-CIDR6,2400:9600:8800::/48,no-resolve
 IP-CIDR6,2400:9620::/32,no-resolve
