@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-05-28T07:46:06Z
+# Generated on 2026-05-29T07:45:07Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v6.txt
 # Total: 943
 
@@ -120,8 +120,8 @@ IP-CIDR6,2401:d180:111::/48,no-resolve
 IP-CIDR6,2401:d920::/48,no-resolve
 IP-CIDR6,2401:de00::/32,no-resolve
 IP-CIDR6,2401:ec00::/32,no-resolve
-IP-CIDR6,2401:fa00:40::/47,no-resolve
-IP-CIDR6,2401:fa00:46::/47,no-resolve
+IP-CIDR6,2401:fa00:40::/48,no-resolve
+IP-CIDR6,2401:fa00:47::/48,no-resolve
 IP-CIDR6,2401:fa00:58::/48,no-resolve
 IP-CIDR6,2401:fa00:5f::/48,no-resolve
 IP-CIDR6,2402:840:d000::/46,no-resolve
