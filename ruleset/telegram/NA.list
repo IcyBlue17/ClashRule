@@ -1,0 +1,9 @@
+# Summary: 2 IP-CIDR rules for NA (North America)
+# Generated at (UTC+0): 2026-06-12T07:58:41.324Z
+# Inputed sources: https://core.telegram.org/resources/cidr.txt
+# Data source: via ipinfo API (https://api.ipinfo.io/lite)
+# Notes: THIS IS A GENERATED FILE, DO NOT EDIT MANUALLY. 
+
+# United States
+IP-CIDR, 91.108.12.0/22, no-resolve
+IP-CIDR, 2001:b28:f23d::/48, no-resolve
