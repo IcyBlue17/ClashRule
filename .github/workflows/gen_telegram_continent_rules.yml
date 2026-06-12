@@ -1,0 +1,43 @@
+name: Update Telegram Continent Ruleset
+on:
+  workflow_dispatch:
+  # Uncomment the following lines to enable scheduled updates (e.g., daily at 5 AM UTC)
+  # Not recommended because Telegram's CIDR list is unlikely to change frequently.
+  # schedule:
+  #   - cron: '0 5 * * *'
+permissions:
+  contents: write
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Update Telegram continent ruleset
+        env:
+          IPINFO_BASE_URL: ${{ vars.IPINFO_BASE_URL }}
+          IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${IPINFO_TOKEN:-}" ]; then
+            echo "::error::Missing required GitHub secret: IPINFO_TOKEN"
+            exit 1
+          fi
+          bun ./generateContinentRulesByCIDR.ts ./ruleset/telegram/ https://core.telegram.org/resources/cidr.txt
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: 'chore: update Telegram continent ruleset [skip ci]'
+          branch: ${{ github.ref_name }}
