@@ -33,7 +33,7 @@ jobs:
             echo "::error::Missing required GitHub secret: IPINFO_TOKEN"
             exit 1
           fi
-          bun ./generateContinentRulesByCIDR.ts ./ruleset/telegram/ https://core.telegram.org/resources/cidr.txt
+          bun ./scripts/generateContinentRulesByCIDR.ts ./ruleset/telegram/ https://core.telegram.org/resources/cidr.txt
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
