@@ -1,7 +1,7 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-06-12T08:15:16Z
+# Generated on 2026-06-13T07:38:36Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v4.txt
-# Total: 3938
+# Total: 3941
 
 IP-CIDR,1.2.4.0/24,no-resolve
 IP-CIDR,1.8.1.0/24,no-resolve
@@ -199,7 +199,9 @@ IP-CIDR,43.225.208.0/22,no-resolve
 IP-CIDR,43.225.216.0/22,no-resolve
 IP-CIDR,43.225.255.0/24,no-resolve
 IP-CIDR,43.226.32.0/19,no-resolve
-IP-CIDR,43.226.64.0/20,no-resolve
+IP-CIDR,43.226.64.0/21,no-resolve
+IP-CIDR,43.226.72.0/22,no-resolve
+IP-CIDR,43.226.76.0/23,no-resolve
 IP-CIDR,43.226.112.0/21,no-resolve
 IP-CIDR,43.226.128.0/19,no-resolve
 IP-CIDR,43.226.164.0/22,no-resolve
@@ -612,7 +614,8 @@ IP-CIDR,61.47.128.0/18,no-resolve
 IP-CIDR,61.48.0.0/13,no-resolve
 IP-CIDR,61.87.192.0/18,no-resolve
 IP-CIDR,61.128.0.0/10,no-resolve
-IP-CIDR,61.232.0.0/14,no-resolve
+IP-CIDR,61.232.0.0/15,no-resolve
+IP-CIDR,61.234.0.0/16,no-resolve
 IP-CIDR,61.236.80.0/20,no-resolve
 IP-CIDR,61.236.96.0/20,no-resolve
 IP-CIDR,61.236.112.0/21,no-resolve
@@ -1512,7 +1515,7 @@ IP-CIDR,110.112.0.0/15,no-resolve
 IP-CIDR,110.114.0.0/16,no-resolve
 IP-CIDR,110.115.128.0/17,no-resolve
 IP-CIDR,110.116.0.0/16,no-resolve
-IP-CIDR,110.120.0.0/16,no-resolve
+IP-CIDR,110.120.0.0/23,no-resolve
 IP-CIDR,110.152.0.0/14,no-resolve
 IP-CIDR,110.156.0.0/15,no-resolve
 IP-CIDR,110.166.0.0/15,no-resolve
@@ -1524,7 +1527,7 @@ IP-CIDR,110.173.192.0/19,no-resolve
 IP-CIDR,110.176.0.0/12,no-resolve
 IP-CIDR,110.199.0.0/16,no-resolve
 IP-CIDR,110.203.0.0/23,no-resolve
-IP-CIDR,110.211.0.0/16,no-resolve
+IP-CIDR,110.211.0.0/23,no-resolve
 IP-CIDR,110.218.0.0/15,no-resolve
 IP-CIDR,110.228.0.0/14,no-resolve
 IP-CIDR,110.236.0.0/15,no-resolve
@@ -3847,7 +3850,7 @@ IP-CIDR,222.35.0.0/16,no-resolve
 IP-CIDR,222.42.115.0/24,no-resolve
 IP-CIDR,222.44.0.0/15,no-resolve
 IP-CIDR,222.49.128.0/17,no-resolve
-IP-CIDR,222.50.0.0/16,no-resolve
+IP-CIDR,222.50.123.0/24,no-resolve
 IP-CIDR,222.59.128.0/17,no-resolve
 IP-CIDR,222.64.0.0/11,no-resolve
 IP-CIDR,222.125.0.0/16,no-resolve
