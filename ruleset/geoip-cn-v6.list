@@ -1,7 +1,7 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-06-14T08:06:42Z
+# Generated on 2026-06-14T12:30:21Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v6.txt
-# Total: 1108
+# Total: 1034
 
 IP-CIDR6,2001:250::/31,no-resolve
 IP-CIDR6,2001:252::/32,no-resolve
@@ -253,7 +253,6 @@ IP-CIDR6,2404:bc0:4200::/43,no-resolve
 IP-CIDR6,2404:bc0:4300::/44,no-resolve
 IP-CIDR6,2404:bc0:4400::/43,no-resolve
 IP-CIDR6,2404:bc0:4500::/43,no-resolve
-IP-CIDR6,2404:bc0:4620::/44,no-resolve
 IP-CIDR6,2404:bc0:4f00::/43,no-resolve
 IP-CIDR6,2404:1c80::/32,no-resolve
 IP-CIDR6,2404:4dc0::/32,no-resolve
@@ -997,58 +996,9 @@ IP-CIDR6,240a:42f0::/29,no-resolve
 IP-CIDR6,240a:42f8::/30,no-resolve
 IP-CIDR6,240a:6001::/48,no-resolve
 IP-CIDR6,240a:a00b::/32,no-resolve
-IP-CIDR6,240a:a103::/32,no-resolve
-IP-CIDR6,240a:a185::/32,no-resolve
-IP-CIDR6,240a:a1b0::/32,no-resolve
-IP-CIDR6,240a:a1cf::/32,no-resolve
-IP-CIDR6,240a:a1d0::/32,no-resolve
-IP-CIDR6,240a:a287::/32,no-resolve
-IP-CIDR6,240a:a28f::/32,no-resolve
-IP-CIDR6,240a:a2ed::/32,no-resolve
-IP-CIDR6,240a:a33c::/32,no-resolve
-IP-CIDR6,240a:a352::/32,no-resolve
-IP-CIDR6,240a:a397::/32,no-resolve
-IP-CIDR6,240a:a3b3::/32,no-resolve
-IP-CIDR6,240a:a3c0::/32,no-resolve
-IP-CIDR6,240a:a3ce::/32,no-resolve
-IP-CIDR6,240a:a3f6::/32,no-resolve
-IP-CIDR6,240a:a403::/32,no-resolve
-IP-CIDR6,240a:a41c::/32,no-resolve
-IP-CIDR6,240a:a438::/32,no-resolve
-IP-CIDR6,240a:a43b::/32,no-resolve
-IP-CIDR6,240a:a454::/32,no-resolve
-IP-CIDR6,240a:a470::/32,no-resolve
-IP-CIDR6,240a:a487::/32,no-resolve
-IP-CIDR6,240a:a493::/32,no-resolve
-IP-CIDR6,240a:a4ed::/32,no-resolve
-IP-CIDR6,240a:a4f6::/32,no-resolve
-IP-CIDR6,240a:a4f8::/32,no-resolve
-IP-CIDR6,240a:a503::/32,no-resolve
-IP-CIDR6,240a:a53d::/32,no-resolve
-IP-CIDR6,240a:a557::/32,no-resolve
-IP-CIDR6,240a:a56a::/32,no-resolve
-IP-CIDR6,240a:a59f::/32,no-resolve
-IP-CIDR6,240a:a5c3::/32,no-resolve
-IP-CIDR6,240a:a5c9::/32,no-resolve
-IP-CIDR6,240a:a646::/32,no-resolve
-IP-CIDR6,240a:a64e::/32,no-resolve
-IP-CIDR6,240a:a662::/32,no-resolve
-IP-CIDR6,240a:a66a::/32,no-resolve
-IP-CIDR6,240a:a66c::/32,no-resolve
-IP-CIDR6,240a:a68d::/32,no-resolve
-IP-CIDR6,240a:a695::/32,no-resolve
-IP-CIDR6,240a:a69f::/32,no-resolve
-IP-CIDR6,240a:a6b7::/32,no-resolve
-IP-CIDR6,240a:a6ff::/32,no-resolve
-IP-CIDR6,240a:a726::/32,no-resolve
-IP-CIDR6,240a:a78f::/32,no-resolve
-IP-CIDR6,240a:a79f::/32,no-resolve
-IP-CIDR6,240a:a7a9::/32,no-resolve
-IP-CIDR6,240a:a7b1::/32,no-resolve
-IP-CIDR6,240a:a7ba::/32,no-resolve
-IP-CIDR6,240a:a7bf::/32,no-resolve
-IP-CIDR6,240a:a7ee::/32,no-resolve
-IP-CIDR6,240a:a7fc::/32,no-resolve
+IP-CIDR6,240a:a30d::/32,no-resolve
+IP-CIDR6,240a:a3b2::/32,no-resolve
+IP-CIDR6,240a:a6d0::/32,no-resolve
 IP-CIDR6,240a:a802::/31,no-resolve
 IP-CIDR6,240a:a805::/32,no-resolve
 IP-CIDR6,240a:a806::/31,no-resolve
@@ -1058,31 +1008,7 @@ IP-CIDR6,240a:a81e::/31,no-resolve
 IP-CIDR6,240a:a820::/28,no-resolve
 IP-CIDR6,240a:a830::/31,no-resolve
 IP-CIDR6,240a:a832::/32,no-resolve
-IP-CIDR6,240a:aa1a::/32,no-resolve
-IP-CIDR6,240a:aa1c::/32,no-resolve
-IP-CIDR6,240a:aa1f::/32,no-resolve
-IP-CIDR6,240a:aa27::/32,no-resolve
-IP-CIDR6,240a:aa2a::/32,no-resolve
-IP-CIDR6,240a:aa40::/32,no-resolve
-IP-CIDR6,240a:aa4d::/32,no-resolve
-IP-CIDR6,240a:aa62::/32,no-resolve
-IP-CIDR6,240a:aa76::/32,no-resolve
-IP-CIDR6,240a:aa7a::/32,no-resolve
-IP-CIDR6,240a:aa7c::/32,no-resolve
-IP-CIDR6,240a:aa7f::/32,no-resolve
-IP-CIDR6,240a:aaa6::/32,no-resolve
-IP-CIDR6,240a:aad6::/32,no-resolve
-IP-CIDR6,240a:aadc::/32,no-resolve
-IP-CIDR6,240a:aae4::/32,no-resolve
-IP-CIDR6,240a:aae9::/32,no-resolve
-IP-CIDR6,240a:ab4f::/32,no-resolve
-IP-CIDR6,240a:ab8d::/32,no-resolve
-IP-CIDR6,240a:ab9b::/32,no-resolve
-IP-CIDR6,240a:abb0::/32,no-resolve
-IP-CIDR6,240a:abb4::/32,no-resolve
-IP-CIDR6,240a:abcc::/32,no-resolve
-IP-CIDR6,240a:abdc::/32,no-resolve
-IP-CIDR6,240a:abe0::/32,no-resolve
+IP-CIDR6,240a:ab7f::/32,no-resolve
 IP-CIDR6,240a:c000::/20,no-resolve
 IP-CIDR6,240b:e001::/32,no-resolve
 IP-CIDR6,240b:e002::/31,no-resolve
