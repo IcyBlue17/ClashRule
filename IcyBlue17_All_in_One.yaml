@@ -521,7 +521,6 @@ rules:
   - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT,no-resolve"
-  - "IP-ASN,32590,Gaming"
   - "DST-PORT,27015-27200,Gaming"
   - "DST-PORT,30000-32000,Gaming"
   - "DST-PORT,4380,Gaming"
