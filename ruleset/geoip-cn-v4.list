@@ -1,7 +1,7 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-06-16T09:15:32Z
+# Generated on 2026-06-17T08:52:41Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v4.txt
-# Total: 3937
+# Total: 3936
 
 IP-CIDR,1.2.4.0/24,no-resolve
 IP-CIDR,1.8.1.0/24,no-resolve
@@ -999,7 +999,7 @@ IP-CIDR,103.78.126.0/23,no-resolve
 IP-CIDR,103.78.228.0/22,no-resolve
 IP-CIDR,103.79.24.0/22,no-resolve
 IP-CIDR,103.79.200.0/22,no-resolve
-IP-CIDR,103.79.228.0/24,no-resolve
+IP-CIDR,103.79.228.0/23,no-resolve
 IP-CIDR,103.81.4.0/22,no-resolve
 IP-CIDR,103.81.48.0/22,no-resolve
 IP-CIDR,103.81.123.0/24,no-resolve
@@ -2285,7 +2285,6 @@ IP-CIDR,121.55.0.0/18,no-resolve
 IP-CIDR,121.56.0.0/15,no-resolve
 IP-CIDR,121.58.0.0/17,no-resolve
 IP-CIDR,121.58.156.0/22,no-resolve
-IP-CIDR,121.59.4.0/22,no-resolve
 IP-CIDR,121.60.0.0/14,no-resolve
 IP-CIDR,121.69.0.0/16,no-resolve
 IP-CIDR,121.70.0.0/17,no-resolve
@@ -2783,7 +2782,7 @@ IP-CIDR,175.30.0.0/15,no-resolve
 IP-CIDR,175.42.0.0/15,no-resolve
 IP-CIDR,175.44.0.0/16,no-resolve
 IP-CIDR,175.45.176.0/24,no-resolve
-IP-CIDR,175.45.179.0/24,no-resolve
+IP-CIDR,175.45.178.0/23,no-resolve
 IP-CIDR,175.46.0.0/15,no-resolve
 IP-CIDR,175.102.0.0/19,no-resolve
 IP-CIDR,175.102.48.0/22,no-resolve
