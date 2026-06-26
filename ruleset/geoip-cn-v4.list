@@ -1,7 +1,7 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-06-25T07:32:20Z
+# Generated on 2026-06-26T07:41:16Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v4.txt
-# Total: 3933
+# Total: 3935
 
 IP-CIDR,1.2.4.0/24,no-resolve
 IP-CIDR,1.8.1.0/24,no-resolve
@@ -170,6 +170,7 @@ IP-CIDR,42.240.8.0/22,no-resolve
 IP-CIDR,42.240.12.0/23,no-resolve
 IP-CIDR,42.240.16.0/23,no-resolve
 IP-CIDR,42.240.20.0/22,no-resolve
+IP-CIDR,42.240.48.0/24,no-resolve
 IP-CIDR,42.240.128.0/17,no-resolve
 IP-CIDR,42.242.0.0/15,no-resolve
 IP-CIDR,42.244.0.0/14,no-resolve
@@ -478,6 +479,7 @@ IP-CIDR,52.82.188.0/23,no-resolve
 IP-CIDR,52.82.190.0/24,no-resolve
 IP-CIDR,52.82.192.0/18,no-resolve
 IP-CIDR,52.83.0.0/16,no-resolve
+IP-CIDR,52.130.227.0/24,no-resolve
 IP-CIDR,54.222.0.0/19,no-resolve
 IP-CIDR,54.222.32.0/21,no-resolve
 IP-CIDR,54.222.45.0/24,no-resolve
@@ -647,6 +649,7 @@ IP-CIDR,81.68.0.0/14,no-resolve
 IP-CIDR,81.173.18.0/23,no-resolve
 IP-CIDR,81.173.20.0/22,no-resolve
 IP-CIDR,81.173.28.0/24,no-resolve
+IP-CIDR,82.38.46.0/23,no-resolve
 IP-CIDR,82.156.0.0/15,no-resolve
 IP-CIDR,87.254.207.0/24,no-resolve
 IP-CIDR,93.183.14.0/24,no-resolve
@@ -983,7 +986,6 @@ IP-CIDR,103.71.202.0/24,no-resolve
 IP-CIDR,103.71.232.0/22,no-resolve
 IP-CIDR,103.72.113.0/24,no-resolve
 IP-CIDR,103.72.172.0/24,no-resolve
-IP-CIDR,103.72.224.0/24,no-resolve
 IP-CIDR,103.73.48.0/24,no-resolve
 IP-CIDR,103.73.116.0/22,no-resolve
 IP-CIDR,103.73.136.0/21,no-resolve
@@ -1014,7 +1016,7 @@ IP-CIDR,103.83.44.0/22,no-resolve
 IP-CIDR,103.83.64.0/22,no-resolve
 IP-CIDR,103.83.72.0/22,no-resolve
 IP-CIDR,103.84.170.0/23,no-resolve
-IP-CIDR,103.85.84.0/22,no-resolve
+IP-CIDR,103.85.84.0/23,no-resolve
 IP-CIDR,103.85.147.0/24,no-resolve
 IP-CIDR,103.85.164.0/22,no-resolve
 IP-CIDR,103.85.168.0/21,no-resolve
@@ -3542,7 +3544,7 @@ IP-CIDR,211.155.80.0/20,no-resolve
 IP-CIDR,211.155.108.0/22,no-resolve
 IP-CIDR,211.155.112.0/20,no-resolve
 IP-CIDR,211.155.128.0/19,no-resolve
-IP-CIDR,211.155.160.0/20,no-resolve
+IP-CIDR,211.155.168.0/21,no-resolve
 IP-CIDR,211.155.176.0/22,no-resolve
 IP-CIDR,211.155.184.0/21,no-resolve
 IP-CIDR,211.155.224.0/21,no-resolve

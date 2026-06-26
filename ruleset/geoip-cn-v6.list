@@ -1,11 +1,10 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-06-25T07:32:20Z
+# Generated on 2026-06-26T07:41:17Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v6.txt
-# Total: 1051
+# Total: 1038
 
-IP-CIDR6,2001:250::/31,no-resolve
-IP-CIDR6,2001:252::/32,no-resolve
-IP-CIDR6,2001:253:237::/48,no-resolve
+IP-CIDR6,2001:250::/30,no-resolve
+IP-CIDR6,2001:255::/32,no-resolve
 IP-CIDR6,2001:256:100::/48,no-resolve
 IP-CIDR6,2001:c68::/32,no-resolve
 IP-CIDR6,2001:cc0::/32,no-resolve
@@ -96,7 +95,7 @@ IP-CIDR6,2401:2a00:f000::/43,no-resolve
 IP-CIDR6,2401:2e00::/32,no-resolve
 IP-CIDR6,2401:3480::/36,no-resolve
 IP-CIDR6,2401:3480:2000::/35,no-resolve
-IP-CIDR6,2401:34a0::/32,no-resolve
+IP-CIDR6,2401:34a0::/31,no-resolve
 IP-CIDR6,2401:3800::/32,no-resolve
 IP-CIDR6,2401:3880::/32,no-resolve
 IP-CIDR6,2401:3980::/32,no-resolve
@@ -252,6 +251,7 @@ IP-CIDR6,2404:bc0:4200::/43,no-resolve
 IP-CIDR6,2404:bc0:4300::/44,no-resolve
 IP-CIDR6,2404:bc0:4400::/43,no-resolve
 IP-CIDR6,2404:bc0:4500::/43,no-resolve
+IP-CIDR6,2404:bc0:4620::/44,no-resolve
 IP-CIDR6,2404:bc0:4f00::/43,no-resolve
 IP-CIDR6,2404:1c80::/32,no-resolve
 IP-CIDR6,2404:4dc0::/32,no-resolve
@@ -1012,20 +1012,7 @@ IP-CIDR6,240a:42e0::/28,no-resolve
 IP-CIDR6,240a:42f0::/29,no-resolve
 IP-CIDR6,240a:42f8::/30,no-resolve
 IP-CIDR6,240a:6001::/48,no-resolve
-IP-CIDR6,240a:a00b::/32,no-resolve
-IP-CIDR6,240a:a027::/32,no-resolve
-IP-CIDR6,240a:a028::/29,no-resolve
-IP-CIDR6,240a:a030::/32,no-resolve
-IP-CIDR6,240a:a5c3::/32,no-resolve
-IP-CIDR6,240a:a802::/31,no-resolve
-IP-CIDR6,240a:a806::/31,no-resolve
-IP-CIDR6,240a:a808::/31,no-resolve
-IP-CIDR6,240a:a81e::/31,no-resolve
-IP-CIDR6,240a:a820::/28,no-resolve
-IP-CIDR6,240a:a830::/31,no-resolve
-IP-CIDR6,240a:a832::/32,no-resolve
-IP-CIDR6,240a:aa22::/32,no-resolve
-IP-CIDR6,240a:ab60::/32,no-resolve
+IP-CIDR6,240a:a000::/20,no-resolve
 IP-CIDR6,240a:c000::/20,no-resolve
 IP-CIDR6,240b:e001::/32,no-resolve
 IP-CIDR6,240b:e002::/31,no-resolve
