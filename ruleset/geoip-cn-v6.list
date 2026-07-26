@@ -1,7 +1,7 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-07-25T06:08:36Z
+# Generated on 2026-07-26T06:27:42Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v6.txt
-# Total: 1075
+# Total: 1078
 
 IP-CIDR6,2001:250::/30,no-resolve
 IP-CIDR6,2001:255::/32,no-resolve
@@ -219,6 +219,8 @@ IP-CIDR6,2404:7600::/32,no-resolve
 IP-CIDR6,2404:7cc0:7f00::/47,no-resolve
 IP-CIDR6,2404:7cc0:7f04::/47,no-resolve
 IP-CIDR6,2404:c2c0::/40,no-resolve
+IP-CIDR6,2404:c2c0:111::/48,no-resolve
+IP-CIDR6,2404:c2c0:112::/48,no-resolve
 IP-CIDR6,2404:c2c0:240::/44,no-resolve
 IP-CIDR6,2404:c2c0:280::/44,no-resolve
 IP-CIDR6,2404:c2c0:2c0::/44,no-resolve
@@ -1032,6 +1034,7 @@ IP-CIDR6,2409:8a56:23e0::/43,no-resolve
 IP-CIDR6,2409:8a78::/32,no-resolve
 IP-CIDR6,2409:8b78::/32,no-resolve
 IP-CIDR6,2409:8c30:3000::/48,no-resolve
+IP-CIDR6,2409:8c34:6fd::/48,no-resolve
 IP-CIDR6,2409:8c34:6ff::/48,no-resolve
 IP-CIDR6,2409:8c44::/48,no-resolve
 IP-CIDR6,2409:8c54:8c0::/44,no-resolve
