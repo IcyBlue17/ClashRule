@@ -1,7 +1,7 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-07-27T06:53:37Z
+# Generated on 2026-07-28T06:17:18Z
 # Source: https://cira.moedove.com/china_domestic_backbone_v4.txt
-# Total: 4054
+# Total: 4062
 
 IP-CIDR,1.1.8.0/24,no-resolve
 IP-CIDR,1.2.4.0/24,no-resolve
@@ -73,6 +73,7 @@ IP-CIDR,14.224.176.0/20,no-resolve
 IP-CIDR,14.226.80.0/21,no-resolve
 IP-CIDR,14.226.192.0/21,no-resolve
 IP-CIDR,14.232.160.0/20,no-resolve
+IP-CIDR,14.238.34.0/24,no-resolve
 IP-CIDR,14.241.160.0/21,no-resolve
 IP-CIDR,14.241.200.0/21,no-resolve
 IP-CIDR,14.255.16.0/24,no-resolve
@@ -124,6 +125,7 @@ IP-CIDR,36.248.0.0/14,no-resolve
 IP-CIDR,36.255.116.0/22,no-resolve
 IP-CIDR,36.255.128.0/22,no-resolve
 IP-CIDR,36.255.164.0/24,no-resolve
+IP-CIDR,38.76.140.0/23,no-resolve
 IP-CIDR,39.64.0.0/11,no-resolve
 IP-CIDR,39.96.0.0/13,no-resolve
 IP-CIDR,39.104.0.0/14,no-resolve
@@ -2749,6 +2751,9 @@ IP-CIDR,154.8.48.0/20,no-resolve
 IP-CIDR,154.8.128.0/17,no-resolve
 IP-CIDR,154.72.44.0/24,no-resolve
 IP-CIDR,154.89.32.0/20,no-resolve
+IP-CIDR,154.92.10.0/23,no-resolve
+IP-CIDR,154.203.0.0/23,no-resolve
+IP-CIDR,154.203.244.0/23,no-resolve
 IP-CIDR,155.126.176.0/23,no-resolve
 IP-CIDR,156.107.160.0/23,no-resolve
 IP-CIDR,156.107.170.0/24,no-resolve
@@ -2840,6 +2845,7 @@ IP-CIDR,175.0.0.0/12,no-resolve
 IP-CIDR,175.16.0.0/13,no-resolve
 IP-CIDR,175.24.0.0/15,no-resolve
 IP-CIDR,175.27.0.0/16,no-resolve
+IP-CIDR,175.29.22.0/23,no-resolve
 IP-CIDR,175.30.0.0/15,no-resolve
 IP-CIDR,175.42.0.0/15,no-resolve
 IP-CIDR,175.44.0.0/16,no-resolve
@@ -3391,6 +3397,7 @@ IP-CIDR,203.195.128.0/17,no-resolve
 IP-CIDR,203.196.0.0/21,no-resolve
 IP-CIDR,203.202.236.0/23,no-resolve
 IP-CIDR,203.205.88.0/22,no-resolve
+IP-CIDR,203.205.95.0/24,no-resolve
 IP-CIDR,203.207.64.0/19,no-resolve
 IP-CIDR,203.207.96.0/21,no-resolve
 IP-CIDR,203.207.104.0/22,no-resolve
@@ -3664,7 +3671,7 @@ IP-CIDR,211.160.20.0/23,no-resolve
 IP-CIDR,211.160.22.0/24,no-resolve
 IP-CIDR,211.160.24.0/24,no-resolve
 IP-CIDR,211.160.27.0/24,no-resolve
-IP-CIDR,211.160.29.0/24,no-resolve
+IP-CIDR,211.160.28.0/23,no-resolve
 IP-CIDR,211.160.36.0/23,no-resolve
 IP-CIDR,211.160.46.0/24,no-resolve
 IP-CIDR,211.160.62.0/24,no-resolve
@@ -3708,6 +3715,7 @@ IP-CIDR,213.132.231.0/24,no-resolve
 IP-CIDR,213.132.240.0/21,no-resolve
 IP-CIDR,213.132.251.0/24,no-resolve
 IP-CIDR,213.132.252.0/22,no-resolve
+IP-CIDR,216.38.170.0/23,no-resolve
 IP-CIDR,218.0.0.0/11,no-resolve
 IP-CIDR,218.56.0.0/13,no-resolve
 IP-CIDR,218.64.0.0/11,no-resolve
