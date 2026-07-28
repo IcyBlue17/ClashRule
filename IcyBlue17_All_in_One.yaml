@@ -83,6 +83,29 @@ proxy-groups:
       - Main
       - DIRECT
 
+  - name: Wificall
+    type: select
+    proxies:
+      - 🇺🇲 USA
+      - 🇯🇵 JPN
+      - 🇸🇬 SGP
+      - 🇨🇳 TWN
+      - 🇪🇺 EUR
+      - 🇭🇰 HKG
+      - Main
+      - DIRECT
+  - name: Apple Wificall locate
+    type: select
+    proxies:
+      - 🇺🇲 USA
+      - 🇯🇵 JPN
+      - 🇸🇬 SGP
+      - 🇨🇳 TWN
+      - 🇪🇺 EUR
+      - 🇭🇰 HKG
+      - Main
+      - DIRECT
+
   - name: Apple
     type: select
     proxies:
@@ -502,6 +525,20 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Wificall:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/apple-wificall-locate.list
+    path: ./ruleset/apple-wificall-locate.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  wificall-uk:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/CherryMian/the_clash_ruleset/refs/heads/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-uk.list
+    path: ./ruleset/wificalling-uk.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
@@ -546,6 +583,8 @@ rules:
   - "RULE-SET,Epic,Gaming"
   - "RULE-SET,Games,Gaming"
   - "RULE-SET,hypixel,Hypixel"
+  - "RULE-SET,Wificall,Apple Wificall locate"
+  - "RULE-SET,wificall-uk,Wificall"
   - "PROCESS-NAME,mosdns,DNS"
   - "RULE-SET,STUN,Main"
   - "DST-PORT,3478,Main"
