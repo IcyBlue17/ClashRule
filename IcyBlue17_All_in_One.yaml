@@ -83,17 +83,12 @@ proxy-groups:
       - Main
       - DIRECT
 
-  - name: Wificall
+  - name: Wificall UK
     type: select
-    proxies:
-      - 🇺🇲 USA
-      - 🇯🇵 JPN
-      - 🇸🇬 SGP
-      - 🇨🇳 TWN
-      - 🇪🇺 EUR
-      - 🇭🇰 HKG
-      - Main
-      - DIRECT
+    include-all: true
+  - name: Wificall HK
+    type: select
+    include-all: true
   - name: Apple Wificall locate
     type: select
     proxies:
@@ -237,7 +232,7 @@ proxy-groups:
   - name: JP Games
     type: select
     include-all: true
-    filter: Sonet|NTT|家宽|Home
+    filter: Sonet|NTT|家宽|Home|KDDI|Softbank
   - name: Hypixel
     include-all: true
     type: select
@@ -539,6 +534,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  wificall-hk:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/CherryMian/the_clash_ruleset/refs/heads/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-hk.list
+    path: ./ruleset/wificalling-hk.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
@@ -584,7 +586,8 @@ rules:
   - "RULE-SET,Epic,Gaming"
   - "RULE-SET,Games,Gaming"
   - "RULE-SET,hypixel,Hypixel"
-  - "RULE-SET,wificall-uk,Wificall"
+  - "RULE-SET,wificall-uk,Wificall UK"
+  - "RULE-SET,wificall-hk,Wificall HK"
   - "PROCESS-NAME,mosdns,DNS"
   - "RULE-SET,STUN,Main"
   - "DST-PORT,3478,Main"
