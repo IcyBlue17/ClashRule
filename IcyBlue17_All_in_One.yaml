@@ -544,6 +544,7 @@ rule-providers:
 
 rules:
   - "RULE-SET,LAN,DIRECT"
+  - "RULE-SET,Wificall,Apple Wificall locate"
   - "RULE-SET,ip-r,REJECT"
   - "RULE-SET,PCDN,REJECT"
   - "RULE-SET,Meituan-Overseas,REJECT"
@@ -551,7 +552,6 @@ rules:
   - "RULE-SET,HTTPDNS,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,GameDLCDN,DIRECT"
-  - "RULE-SET,Wificall,Apple Wificall locate"
   - "RULE-SET,private-relay,iCloud Private Relay"
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,stripe,Main"
