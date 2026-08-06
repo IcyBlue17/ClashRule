@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-06-14T12:32:36Z
+# Generated on 2026-08-06T13:16:00Z
 # Sources:
 # - NoMalwares (Quantumult X): https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf
 # - Reject No Drop (Surge): https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/reject-no-drop.conf
@@ -60,6 +60,7 @@ DOMAIN-SUFFIX,atlassolutions.com
 DOMAIN-SUFFIX,baihemob.com
 DOMAIN-SUFFIX,beizi.biz
 DOMAIN-SUFFIX,bsccdn.net
+DOMAIN-SUFFIX,bvmlt.top
 DOMAIN-SUFFIX,cdnnodedns.cn
 DOMAIN-SUFFIX,d.meituan.net
 DOMAIN-SUFFIX,data.adobedc.net
@@ -115,6 +116,7 @@ DOMAIN-SUFFIX,yfp2p.net
 DOMAIN-KEYWORD,-flv-live
 DOMAIN-KEYWORD,-p2p-v2.pull.yximgs.com
 DOMAIN-KEYWORD,-p2p.pull.yximgs.com
+DOMAIN-WILDCARD,*.*.1s.*.by.*.skk.moe
 DOMAIN-WILDCARD,*.apple.com
 DOMAIN-WILDCARD,*.bilivideo.com
 DOMAIN-WILDCARD,*.douyucdn.cn
@@ -126,7 +128,6 @@ DOMAIN-WILDCARD,*.line.me
 DOMAIN-WILDCARD,*.meituan.com
 DOMAIN-WILDCARD,*.meituan.net
 DOMAIN-WILDCARD,*.msstatic.com
-DOMAIN-WILDCARD,*.skk.moe
 DOMAIN-WILDCARD,*.whatsapp.net
 DOMAIN-WILDCARD,*.xhscdn.com
 DOMAIN-WILDCARD,*.xiaohongshu.com
