@@ -315,6 +315,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  tencentcloud:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/tencentcloud.list
+    path: ./ruleset/TencentCloud.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   stripe:
     url: https://gh.21119855.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Stripe/Stripe.list
     path: ./ruleset/stripe.list
@@ -559,7 +566,7 @@ rules:
   - "RULE-SET,ip-d,IP ATTR [CDN]"
   - "RULE-SET,ip-p,IP ATTR"
   - "RULE-SET,Gryphline,Gaming"
-  - "DOMAIN-SUFFIX,tencentcloud.com,Main"
+  - "RULE-SET,tencentcloud,Main"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT,no-resolve"
   - "DST-PORT,27015-27200,Gaming"
