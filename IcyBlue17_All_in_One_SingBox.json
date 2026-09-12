@@ -691,7 +691,8 @@
         "action": "route",
         "rule_set": [
           "OpenAI",
-          "Claude"
+          "Claude",
+          "Cursor"
         ],
         "outbound": "BaseAI"
       },
@@ -1081,6 +1082,13 @@
         "tag": "Claude",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Claude/Claude.srs",
+        "download_detour": "Main"
+      },
+      {
+        "type": "remote",
+        "tag": "Cursor",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-cursor.srs",
         "download_detour": "Main"
       },
       {
