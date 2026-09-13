@@ -41,6 +41,10 @@ EXTRA_RULES: Sequence[str] = (
     "DOMAIN-SUFFIX,business.githubcopilot.com",
     "DOMAIN-SUFFIX,enterprise.githubcopilot.com",
     "DOMAIN,copilot-telemetry.githubusercontent.com",
+    "DOMAIN-SUFFIX,cursor.com",
+    "DOMAIN-SUFFIX,cursor.sh",
+    "DOMAIN-SUFFIX,cursorapi.com",
+    "DOMAIN-SUFFIX,cursor-cdn.com",
 )
 
 VALID_PREFIXES: Sequence[str] = (
@@ -123,7 +127,7 @@ def main() -> None:
         f"# Generated on {timestamp}",
         "# Sources:",
         *[f"# - {name}: {url}" for name, url in SOURCES],
-        "# - Custom additions: Copilot + Zed domains",
+        "# - Custom additions: Copilot + Zed + Cursor domains",
         "",
     ]
 
