@@ -1,5 +1,5 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-08-28T15:51:32Z
+# Generated on 2026-09-13T17:16:24Z
 # Sources:
 # - NoMalwares (Quantumult X): https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf
 # - Reject No Drop (Surge): https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/reject-no-drop.conf
@@ -140,6 +140,7 @@ DOMAIN-WILDCARD,p2p-*.douyucdn.cn
 DOMAIN-WILDCARD,p2pchunk-*.douyucdn.cn
 DOMAIN-WILDCARD,p2plive-*.douyucdn.cn
 DOMAIN-WILDCARD,stun*.douyucdn.cn
+DOMAIN-WILDCARD,upos-sz-302*.bilivideo.com
 DOMAIN-WILDCARD,xpis-*-xcdn.youku.com
 DOMAIN-REGEX,^[^.]+\.[^.]+\.com\.cn$
 AND,((PROTOCOL,UDP),(DOMAIN-SUFFIX,googlevideo.com))
