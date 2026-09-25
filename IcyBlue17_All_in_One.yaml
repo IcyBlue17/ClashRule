@@ -548,10 +548,18 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  biligame:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/biligames.list
+    path: ./ruleset/biligame.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
   - "RULE-SET,Wificall,Apple Wificall locate"
+  - "RULE-SET,biligame,Gaming"
   - "RULE-SET,ip-r,REJECT"
   - "RULE-SET,PCDN,REJECT"
   - "RULE-SET,Meituan-Overseas,REJECT"
