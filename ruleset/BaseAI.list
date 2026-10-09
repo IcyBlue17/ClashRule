@@ -1,18 +1,23 @@
 # DO NOT EDIT MANUALLY
-# Generated on 2026-10-07T10:42:58Z
+# Generated on 2026-10-09T05:04:31Z
 # Sources:
 # - Anthropic: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Anthropic/Anthropic.list
 # - OpenAI: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
 # - Gemini: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.list
 # - Copilot: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot.list
-# - Custom additions: Copilot + Zed + Cursor domains
+# - Custom additions: Copilot + Zed + Cursor + Claude domains
 
 DOMAIN,ai.google.dev
 DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,anthropic-com.ghost.io
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic.com.cdn.cloudflare.net
 DOMAIN,api.msn.com
 DOMAIN,api.statsig.com
 DOMAIN,assets.msn.com
 DOMAIN,browser-intake-datadoghq.com
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN,cdn.usefathom.com
 DOMAIN,chat.openai.com.cdn.cloudflare.net
 DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN,copilot-telemetry.githubusercontent.com
@@ -48,7 +53,12 @@ DOMAIN-SUFFIX,business.githubcopilot.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,cursor-cdn.com
 DOMAIN-SUFFIX,cursor.com
@@ -78,18 +88,24 @@ DOMAIN-SUFFIX,openaicom.imgix.net
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,statsigapi.net
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-SUFFIX,zed.dev
 DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,datadog
 DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,generativelanguage
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,openaicom-api
+DOMAIN-KEYWORD,sift
+IP-CIDR,160.79.104.0/21,no-resolve
 IP-CIDR,24.199.123.28/32
 IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32
 IP-CIDR,64.23.132.171/32,no-resolve
+IP-CIDR6,2607:6bc0::/32,no-resolve
 IP-ASN,14061,no-resolve
 IP-ASN,20473
 IP-ASN,20473,no-resolve
+IP-ASN,399358,no-resolve
