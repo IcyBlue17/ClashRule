@@ -45,6 +45,29 @@ EXTRA_RULES: Sequence[str] = (
     "DOMAIN-SUFFIX,cursor.sh",
     "DOMAIN-SUFFIX,cursorapi.com",
     "DOMAIN-SUFFIX,cursor-cdn.com",
+    # Claude / Anthropic: https://ip.net.coffee/claude/site.html
+    "DOMAIN-SUFFIX,anthropic.com",
+    "DOMAIN-SUFFIX,claude.ai",
+    "DOMAIN-SUFFIX,claude.com",
+    "DOMAIN-SUFFIX,clau.de",
+    "DOMAIN-SUFFIX,claudemcpclient.com",
+    "DOMAIN-SUFFIX,claudemcpcontent.com",
+    "DOMAIN-SUFFIX,claudeusercontent.com",
+    "DOMAIN,servd-anthropic-website.b-cdn.net",
+    "DOMAIN,anthropic.com.cdn.cloudflare.net",
+    "DOMAIN,anthropic.auth0.com",
+    "DOMAIN,anthropic-com.ghost.io",
+    "DOMAIN-SUFFIX,sentry.io",
+    "DOMAIN-SUFFIX,statsigapi.net",
+    "DOMAIN,browser-intake-us5-datadoghq.com",
+    "DOMAIN-KEYWORD,datadog",
+    "DOMAIN-KEYWORD,sift",
+    "DOMAIN-SUFFIX,intercom.io",
+    "DOMAIN-SUFFIX,intercomcdn.com",
+    "DOMAIN,cdn.usefathom.com",
+    "IP-CIDR,160.79.104.0/21,no-resolve",
+    "IP-CIDR6,2607:6bc0::/32,no-resolve",
+    "IP-ASN,399358,no-resolve",
 )
 
 VALID_PREFIXES: Sequence[str] = (
@@ -127,7 +150,7 @@ def main() -> None:
         f"# Generated on {timestamp}",
         "# Sources:",
         *[f"# - {name}: {url}" for name, url in SOURCES],
-        "# - Custom additions: Copilot + Zed + Cursor domains",
+        "# - Custom additions: Copilot + Zed + Cursor + Claude domains",
         "",
     ]
 
