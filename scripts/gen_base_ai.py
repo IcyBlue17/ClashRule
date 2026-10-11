@@ -45,6 +45,10 @@ EXTRA_RULES: Sequence[str] = (
     "DOMAIN-SUFFIX,cursor.sh",
     "DOMAIN-SUFFIX,cursorapi.com",
     "DOMAIN-SUFFIX,cursor-cdn.com",
+    # xAI / Grok. grok.com is also in the Twitter list and x.ai is in GlobalMedia;
+    # BaseAI is matched first, so these stay in the AI group.
+    "DOMAIN-SUFFIX,x.ai",
+    "DOMAIN-SUFFIX,grok.com",
     # Claude / Anthropic: https://ip.net.coffee/claude/site.html
     "DOMAIN-SUFFIX,anthropic.com",
     "DOMAIN-SUFFIX,claude.ai",
@@ -150,7 +154,7 @@ def main() -> None:
         f"# Generated on {timestamp}",
         "# Sources:",
         *[f"# - {name}: {url}" for name, url in SOURCES],
-        "# - Custom additions: Copilot + Zed + Cursor + Claude domains",
+        "# - Custom additions: Copilot + Zed + Cursor + Claude + xAI domains",
         "",
     ]
 
