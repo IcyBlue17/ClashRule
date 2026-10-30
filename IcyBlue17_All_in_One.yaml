@@ -555,6 +555,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  pikpak:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/pikpak.list
+    path: ./ruleset/pikpak.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LAN,DIRECT"
@@ -575,6 +582,7 @@ rules:
   - "RULE-SET,ip-p,IP ATTR"
   - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,tencentcloud,Main"
+  - "RULE-SET,pikpak,Main"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT,no-resolve"
   - "DST-PORT,27015-27200,Gaming"
