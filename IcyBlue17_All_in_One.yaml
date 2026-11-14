@@ -572,6 +572,22 @@ rules:
   - "RULE-SET,Meituan-Overseas,REJECT"
   - "RULE-SET,ZhihuADs,REJECT"
   - "RULE-SET,HTTPDNS,REJECT"
+  # Steam Community (site, images, avatars, workshop/UGC) via proxy.
+  # Must precede SteamCN and China: those DIRECT sets include
+  # steamusercontent.com and steamcommunity-a.akamaihd.net.
+  # Game downloads stay below (SteamCN steamcontent/cm/steampipe, GameDLCDN steamserver.net).
+  - "DOMAIN-SUFFIX,steamcommunity.com,Main"
+  - "DOMAIN-SUFFIX,steamusercontent.com,Main"
+  - "DOMAIN,steamcommunity-a.akamaihd.net,Main"
+  - "DOMAIN,steamuserimages-a.akamaihd.net,Main"
+  - "DOMAIN,steamusercontent-a.akamaihd.net,Main"
+  - "DOMAIN,steamcdn-a.akamaihd.net,Main"
+  - "DOMAIN,community.steamstatic.com,Main"
+  - "DOMAIN,community.akamai.steamstatic.com,Main"
+  - "DOMAIN,community.cloudflare.steamstatic.com,Main"
+  - "DOMAIN,avatars.steamstatic.com,Main"
+  - "DOMAIN,avatars.akamai.steamstatic.com,Main"
+  - "DOMAIN,avatars.cloudflare.steamstatic.com,Main"
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,GameDLCDN,DIRECT"
   - "RULE-SET,private-relay,iCloud Private Relay"
