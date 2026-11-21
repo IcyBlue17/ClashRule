@@ -1,2 +1,5 @@
 DOMAIN-SUFFIX,oklink.com
 DOMAIN-SUFFIX,htx.com
+IP-CIDR,43.170.214.92/32,no-resolve
+IP-CIDR,43.170.93.92/32,no-resolve
+IP-CIDR,43.146.100.79/32,no-resolve
