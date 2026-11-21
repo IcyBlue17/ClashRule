@@ -3,3 +3,13 @@ DOMAIN-SUFFIX,htx.com
 IP-CIDR,43.170.214.92/32,no-resolve
 IP-CIDR,43.170.93.92/32,no-resolve
 IP-CIDR,43.146.100.79/32,no-resolve
+IP-CIDR,43.109.70.190/32,no-resolve
+IP-CIDR,43.109.70.191/32,no-resolve
+IP-CIDR,43.109.70.192/32,no-resolve
+IP-CIDR,43.109.70.193/32,no-resolve
+IP-CIDR,43.109.70.194/32,no-resolve
+IP-CIDR,43.109.70.195/32,no-resolve
+IP-CIDR,43.109.70.196/32,no-resolve
+IP-CIDR,43.109.70.197/32,no-resolve
+IP-CIDR,163.181.66.211/32,no-resolve
+IP-CIDR,163.181.253.203/32,no-resolve
