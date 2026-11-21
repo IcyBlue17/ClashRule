@@ -352,9 +352,9 @@ rule-providers:
     format: text
     type: http
 
-  OKLink:
-    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/oklink.list
-    path: ./ruleset/oklink.list
+  Trash:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/trash.list
+    path: ./ruleset/trash.list
     behavior: classical
     interval: 86400
     format: text
@@ -602,8 +602,8 @@ rules:
   - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,tencentcloud,Main"
   - "RULE-SET,pikpak,Main"
-  # OKLink is inside the China DIRECT set; keep this ahead of that rule.
-  - "RULE-SET,OKLink,Main"
+  # trash.list overrides China DIRECT for these domains; keep it ahead of that rule.
+  - "RULE-SET,Trash,Main"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT,no-resolve"
   - "DST-PORT,27015-27200,Gaming"
