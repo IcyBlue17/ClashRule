@@ -352,6 +352,13 @@ rule-providers:
     format: text
     type: http
 
+  OKLink:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/oklink.list
+    path: ./ruleset/oklink.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   China:
     url: https://ruleset.11451919.xyz/ios_rule_script/rule/Clash/ChinaMax/ChinaMax.list
     path: ./ruleset/China.list
@@ -595,6 +602,8 @@ rules:
   - "RULE-SET,Gryphline,Gaming"
   - "RULE-SET,tencentcloud,Main"
   - "RULE-SET,pikpak,Main"
+  # OKLink is inside the China DIRECT set; keep this ahead of that rule.
+  - "RULE-SET,OKLink,Main"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT,no-resolve"
   - "DST-PORT,27015-27200,Gaming"
