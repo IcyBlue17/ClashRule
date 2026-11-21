@@ -359,6 +359,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  SteamCommunity:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/steam-community.list
+    path: ./ruleset/steam-community.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   SteamCN:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list
     path: ./ruleset/SteamCN.list
@@ -576,18 +583,7 @@ rules:
   # Must precede SteamCN and China: those DIRECT sets include
   # steamusercontent.com and steamcommunity-a.akamaihd.net.
   # Game downloads stay below (SteamCN steamcontent/cm/steampipe, GameDLCDN steamserver.net).
-  - "DOMAIN-SUFFIX,steamcommunity.com,Main"
-  - "DOMAIN-SUFFIX,steamusercontent.com,Main"
-  - "DOMAIN,steamcommunity-a.akamaihd.net,Main"
-  - "DOMAIN,steamuserimages-a.akamaihd.net,Main"
-  - "DOMAIN,steamusercontent-a.akamaihd.net,Main"
-  - "DOMAIN,steamcdn-a.akamaihd.net,Main"
-  - "DOMAIN,community.steamstatic.com,Main"
-  - "DOMAIN,community.akamai.steamstatic.com,Main"
-  - "DOMAIN,community.cloudflare.steamstatic.com,Main"
-  - "DOMAIN,avatars.steamstatic.com,Main"
-  - "DOMAIN,avatars.akamai.steamstatic.com,Main"
-  - "DOMAIN,avatars.cloudflare.steamstatic.com,Main"
+  - "RULE-SET,SteamCommunity,Main"
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,GameDLCDN,DIRECT"
   - "RULE-SET,private-relay,iCloud Private Relay"
