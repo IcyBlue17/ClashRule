@@ -34,3 +34,4 @@ DOMAIN-SUFFIX,byapis.com
 DOMAIN-SUFFIX,bycbe.com
 IP-CIDR,43.154.61.67/32,no-resolve
 IP-CIDR,43.160.158.108/32,no-resolve
+IP-CIDR,43.135.121.179/32,no-resolve
