@@ -359,6 +359,20 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  tencent:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/tencent.list
+    path: ./ruleset/tencent.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  aliyun:
+    url: https://gh.21119855.xyz/https://raw.githubusercontent.com/IcyBlue17/ClashRule/refs/heads/main/ruleset/aliyun.list
+    path: ./ruleset/aliyun.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   China:
     url: https://ruleset.11451919.xyz/ios_rule_script/rule/Clash/ChinaMax/ChinaMax.list
     path: ./ruleset/China.list
@@ -604,6 +618,8 @@ rules:
   - "RULE-SET,pikpak,Main"
   # trash.list overrides China DIRECT for these domains; keep it ahead of that rule.
   - "RULE-SET,Trash,Main"
+  - "RULE-SET,tencent,Main"
+  - "RULE-SET,aliyun,Main"
   - "RULE-SET,China,DIRECT"
   - "GEOIP,CN,DIRECT,no-resolve"
   - "DST-PORT,27015-27200,Gaming"
