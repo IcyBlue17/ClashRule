@@ -13,3 +13,14 @@ IP-CIDR,43.109.70.196/32,no-resolve
 IP-CIDR,43.109.70.197/32,no-resolve
 IP-CIDR,163.181.66.211/32,no-resolve
 IP-CIDR,163.181.253.203/32,no-resolve
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bybit.eu
+DOMAIN-SUFFIX,bybit.app
+DOMAIN-SUFFIX,bytick.com
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bymj.io
+IP-CIDR,43.174.250.224/32,no-resolve
+IP-CIDR,43.152.136.157/32,no-resolve
+IP-CIDR,43.175.136.157/32,no-resolve
+IP-CIDR,43.175.134.125/32,no-resolve
+IP-CIDR,43.132.65.57/32,no-resolve
