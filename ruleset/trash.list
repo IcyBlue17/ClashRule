@@ -24,3 +24,13 @@ IP-CIDR,43.152.136.157/32,no-resolve
 IP-CIDR,43.175.136.157/32,no-resolve
 IP-CIDR,43.175.134.125/32,no-resolve
 IP-CIDR,43.132.65.57/32,no-resolve
+DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,bybdc6.com
+DOMAIN-SUFFIX,byd3c3.com
+DOMAIN-SUFFIX,byapps.net
+DOMAIN-SUFFIX,byabcde.com
+DOMAIN-SUFFIX,bycsi.com
+DOMAIN-SUFFIX,byapis.com
+DOMAIN-SUFFIX,bycbe.com
+IP-CIDR,43.154.61.67/32,no-resolve
+IP-CIDR,43.160.158.108/32,no-resolve
